@@ -1,0 +1,20 @@
+{
+	"Host":"206.12.88.106",
+	"Port":"8086",
+	"Db":"awair",
+	"Widgets":[
+		{"Position":{"x":2,"y":0,"z":2},
+		 "Measure":"IEQ_sensor_data",
+		 "Building":"CIRS",
+		 "Room":"3157"},
+		{"Position":{"x":1,"y":0,"z":-2},
+		 "Measure":"IEQ_sensor_data",
+		 "Building":"CIRS",
+		 "Room":"3157"},
+		{"Position":{"x":-1,"y":0,"z":1},
+		 "Measure":"IEQ_sensor_data",
+		 "Building":"CIRS",
+		 "Room":"3157"}
+	]
+
+}

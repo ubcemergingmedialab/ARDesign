@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: 2179d401c6292fd47a1c722f1ef18c2b
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bubble
+    100004: Bubble_Carbon
+    100006: Bubble_Humid
+    100008: Bubble_PM10
+    100010: Bubble_PM25
+    100012: Bubble_Temp
+    100014: Bubble_VOC
+    100016: Humidity_Draw
+    100018: Icons
+    100020: Universal_Back
+    100022: Universal_Boxplot
+    100024: Universal_Drawing
+    100026: Universal_Input
+    100028: Universal_Main
+    100030: Universal_Setting
+    100032: Universal_Small
+    400000: //RootNode
+    400002: Bubble
+    400004: Bubble_Carbon
+    400006: Bubble_Humid
+    400008: Bubble_PM10
+    400010: Bubble_PM25
+    400012: Bubble_Temp
+    400014: Bubble_VOC
+    400016: Humidity_Draw
+    400018: Icons
+    400020: Universal_Back
+    400022: Universal_Boxplot
+    400024: Universal_Drawing
+    400026: Universal_Input
+    400028: Universal_Main
+    400030: Universal_Setting
+    400032: Universal_Small
+    2100000: BubbleMat
+    2100002: Bubble_CarbonMat
+    2100004: Bubble_HumidMat
+    2100006: Bubble_PM10Mat
+    2100008: Bubble_PM25Mat
+    2100010: Bubble_TempMat
+    2100012: Bubble_VOCMat
+    2100014: Humidity_DrawMat
+    2100016: IconsMat
+    2100018: Universal_BackMat
+    2100020: Universal_BoxplotMat
+    2100022: Universal_DrawingMat
+    2100024: Universal_InputMat
+    2100026: Universal_MainMat
+    2100028: Universal_SettingMat
+    2100030: Universal_SmallMat
+    2300000: Bubble
+    2300002: Bubble_Carbon
+    2300004: Bubble_Humid
+    2300006: Bubble_PM10
+    2300008: Bubble_PM25
+    2300010: Bubble_Temp
+    2300012: Bubble_VOC
+    2300014: Humidity_Draw
+    2300016: Icons
+    2300018: Universal_Back
+    2300020: Universal_Boxplot
+    2300022: Universal_Drawing
+    2300024: Universal_Input
+    2300026: Universal_Main
+    2300028: Universal_Setting
+    2300030: Universal_Small
+    3300000: Bubble
+    3300002: Bubble_Carbon
+    3300004: Bubble_Humid
+    3300006: Bubble_PM10
+    3300008: Bubble_PM25
+    3300010: Bubble_Temp
+    3300012: Bubble_VOC
+    3300014: Humidity_Draw
+    3300016: Icons
+    3300018: Universal_Back
+    3300020: Universal_Boxplot
+    3300022: Universal_Drawing
+    3300024: Universal_Input
+    3300026: Universal_Main
+    3300028: Universal_Setting
+    3300030: Universal_Small
+    4300000: Bubble
+    4300002: Bubble_Carbon
+    4300004: Bubble_Humid
+    4300006: Bubble_PM10
+    4300008: Bubble_PM25
+    4300010: Bubble_Temp
+    4300012: Bubble_VOC
+    4300014: Humidity_Draw
+    4300016: Icons
+    4300018: Universal_Back
+    4300020: Universal_Boxplot
+    4300022: Universal_Drawing
+    4300024: Universal_Input
+    4300026: Universal_Main
+    4300028: Universal_Setting
+    4300030: Universal_Small
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
