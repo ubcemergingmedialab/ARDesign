@@ -3014,6 +3014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   element: 6
+  handedness: 0
   trackedObjectToReference: 0
   additionalOffset: {x: 0, y: 0, z: 0}
   additionalRotation: {x: 0, y: 0, z: 0}
@@ -3193,6 +3194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   element: 6
+  handedness: 0
   trackedObjectToReference: 0
   additionalOffset: {x: 0, y: 0, z: 0}
   additionalRotation: {x: 0, y: 0, z: 0}
