@@ -5,10 +5,16 @@ using UnityEngine.UI;
 
 namespace ARDesign.Widgets
 {
-    // Any widget functionality that depends on data types should implement from this
+    /// <summary>
+    /// Typed widget handler class. Type indicates form of Widget content and should derive from InfluxReader
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class WidgetType<T> : WidgetHandler where T : InfluxReader
     {
 
+        /// <summary>
+        /// Reader indicates the data loading functions of the widget. Should derive from InfluxReader
+        /// </summary>
         protected T reader;
 
         void Awake()
@@ -19,8 +25,10 @@ namespace ARDesign.Widgets
 
     }
 
-
-    // General widget functions go here
+    
+    /// <summary>
+    /// WidgetHandler refers to general data-agnostic widget functionality
+    /// </summary>
     public abstract class WidgetHandler : MonoBehaviour
     {
 
@@ -32,15 +40,11 @@ namespace ARDesign.Widgets
         protected GameObject Connector;
 
         protected InfluxReader influxWidget;
-
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
-        // If false, hides everything but the base node. Otherwise, whole widget is visible
+        
+        /// <summary>
+        /// Turns widget off and on - default behavior hides widget object but exposes root node. Override for custom behaviour
+        /// </summary>
+        /// <param name="enable"></param>
         public virtual void EnableWidget(bool enable)
         {
             Connector.SetActive(enable);

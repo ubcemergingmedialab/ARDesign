@@ -4,6 +4,12 @@ using UnityEngine;
 
 namespace ARDesign.Serialize
 {
+
+    /// <summary>
+    /// Struct for storing widget info - Designed for JSON deserialization
+    /// \todo Move room config out of struct
+    /// \todo Add value tags to struct
+    /// </summary>
     public struct DBWidget
     {
 
