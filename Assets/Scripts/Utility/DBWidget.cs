@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct DBWidget {
+namespace ARDesign.Serialize
+{
+    public struct DBWidget
+    {
 
-    public Vector3 Position;
-    public string Measure;
+        public Vector3 Position;
+        public string Measure;
 
-    // Possibly move these to DBScene?
-    public string Building;
-    public string Room;
+        // Possibly move these to DBScene?
+        public string Building;
+        public string Room;
+    }
 }
+

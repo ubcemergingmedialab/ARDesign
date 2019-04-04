@@ -1,4 +1,5 @@
-﻿using HoloToolkit.Unity.InputModule;
+﻿using ARDesign.Widgets;
+using HoloToolkit.Unity.InputModule;
 using HoloToolkit.Unity.Receivers;
 using System;
 using System.Collections;
