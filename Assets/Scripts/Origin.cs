@@ -22,9 +22,11 @@ public class Origin : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// This method associates the parent VuMarkId to Origin
-    /// </summary> 
+    /// <summary> This method associates the parent VuMarkId to Origin 
+    ///     child game object using the given string Id then starts
+    ///     a new coroutine that sends a GET request for JSON data 
+    ///     based on the given Id. </summary> 
+    /// <param><c>VuMarkId</c> is the tracked VuMark's Id.</param>
     public void Init(string VuMarkId)
     { 
         string originid = VuMarkId;

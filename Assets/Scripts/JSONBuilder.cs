@@ -170,12 +170,15 @@ public class JSONBuilder : MonoBehaviour {
         return true;
     }
 
-    /// This method makes an HTTP GET request to HTTP_URL and stores results as string
-    public IEnumerator GetText(string id)
+    /// <summary> This method uses a UnityWebRequest object to make 
+    ///     an HTTP GET request based on given string Id to HTTP_URL 
+    ///     and stores/prints results as string </summary> 
+    /// <param><c>Id</c> is the tracked VuMark's Id.</param>
+    public IEnumerator GetText(string Id)
     {
-        // create web request object with HTTP verb GET and URL 
-        id = id.Substring(0, 24); // needs to be changed depending on id string length
-        UnityWebRequest www = UnityWebRequest.Get(requestUrl + id);
+        // Create web request object with HTTP verb GET and URL 
+        Id = Id.Substring(0, 24); // needs to be changed depending on id string length
+        UnityWebRequest www = UnityWebRequest.Get(requestUrl + Id);
         Debug.Log("Created Web Request object for: " + www.url);
 
         www.downloadHandler = new DownloadHandlerBuffer();
