@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -9,14 +8,31 @@ namespace ARDesign
 {
     namespace Influx
     {
+        /// <summary>
+        /// Static helper functions for Influx querying and serialization
+        /// </summary>
         public static class Utility
         {
+            #region PUBLIC_METHODS
+            /// <summary>
+            /// Builds https query for use with InfluxDB https query language
+            /// </summary>
+            /// <param name="host">Influx host</param>
+            /// <param name="port">Influx post</param>
+            /// <param name="isPretty">If true, query result will be in structured json. For use with testing.</param>
+            /// <param name="db">Influx database</param>
+            /// <param name="query">Query in Influx query language - supports most SQL queries</param>
+            /// <returns>Returns formatted URL</returns>
             public static string EncodeQuery(string host, string port, bool isPretty, string db, string query)
             {
                 return "http://" + host + ":" + port + "/query?db=" + db + (isPretty ? "&pretty=true" : "") + "&q=" + System.Uri.EscapeDataString(query);
             }
 
-            // Parses the values from a given json string - for use in populating widgets
+            /// <summary>
+            /// \deprecated Parses the values from a given json string - for use in populating widgets
+            /// </summary>
+            /// <param name="jsonToParse">JSON string to parse for values</param>
+            /// <returns>Returns list of Values - deprecated in favor of simpler data structures</returns>
             public static IList<Values> ParseValues(string jsonToParse)
             {
 
@@ -38,7 +54,12 @@ namespace ARDesign
                 return toReturn;
 
             }
-            // Parses the values from a given json string - for use in populating widgets
+
+            /// <summary>
+            /// Parses the values from a given json string - for use in populating widgets
+            /// </summary>
+            /// <param name="jsonToParse">JSON string to parse for values</param>
+            /// <returns>Returns dictionary of time-value pairs. Vector2 structure stores time as float in x, and value in y</returns>
             public static IDictionary<DateTime, Vector2> ParseValuesNoType(string jsonToParse)
             {
 
@@ -58,7 +79,12 @@ namespace ARDesign
 
             }
 
-            // Parses the values from a given json string - for use in populating widgets
+            /// <summary>
+            /// Parses the values from a given json string - for use in populating widgets
+            /// </summary>
+            /// <param name="jsonToParse">JSON string to parse for values</param>
+            /// <param name="dict">Existing dictionary to add new values to</param>
+            /// <returns>Returns dictionary of time-value pairs. Vector2 structure stores time as float in x, and value in y</returns>
             public static IDictionary<DateTime, Vector2> ParseValuesNoType(string jsonToParse, IDictionary<DateTime, Vector2> dict)
             {
                 JToken results = JToken.Parse(jsonToParse);
@@ -76,19 +102,25 @@ namespace ARDesign
 
             }
 
-
+            /// <summary>
+            /// Queries database for type labels (ie CO2, temperature, etc)
+            /// </summary>
+            /// <param name="jsonToParse">JSON string to parse - should be returned from query for type labels</param>
+            /// <returns>String array containing all labels</returns>
             public static string[] ParseLabels(string jsonToParse)
             {
                 JToken results = JToken.Parse(jsonToParse);
                 IList<JToken> vals = results["results"][0]["series"][0]["values"].Children().ToList();
                 return vals.Select(val => val[1].ToString()).ToArray<string>();
             }
-
+            #endregion //PUBLIC METHODS
         }
 
+        /// <summary>
+        /// \deprecated Struct for storing deserialized values from widgets
+        /// </summary>
         public struct Values
         {
-
             public DateTime t;
             public long time;
             public string type;

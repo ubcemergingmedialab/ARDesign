@@ -5,37 +5,56 @@ namespace ARDesign
 {
     namespace Influx
     {
+        /// <summary>
+        /// Object for storing scene configuration settings - should be parent to widgets
+        /// </summary>
         public class InfluxSetup : MonoBehaviour
         {
-
+            #region PRIVATE_MEMBER_VARIABLES
             [SerializeField]
             private string host;
             [SerializeField]
-            private int port = 8086;
+            private string port = "8086";
             [SerializeField]
             private string db;
+            #endregion //PRIVATE MEMBER VARIABLES
 
-            // Sets up scene with SBScene object, for use with JSON deserialization
+            #region PUBLIC_METHODS
+            /// <summary>
+            /// Given a deserialized scene configuration, set all Influx server values from config
+            /// </summary>
+            /// <param name="sceneToBuild">DBScene object - should be deserializated from setup</param>
             public void Setup(DBScene sceneToBuild)
             {
                 host = sceneToBuild.Host;
-                port = int.Parse(sceneToBuild.Port);
+                port = sceneToBuild.Port;
                 db = sceneToBuild.Db;
             }
-
-            // Optionally lets you manually set DB settings - kinda redundant, but nice to have i guess
+         
+            /// <summary>
+            /// Manually sets Influx server values
+            /// </summary>
+            /// <param name="h">Host address to set</param>
+            /// <param name="p">Port address to set</param>
+            /// <param name="d">Database name to set</param>
             public void Setup(string h, string p, string d)
             {
                 host = h;
-                port = int.Parse(p);
+                port = p;
                 db = d;
 
             }
 
+            /// <summary>
+            /// Encodes a given plain text query into a InfluxDB https query
+            /// </summary>
+            /// <param name="query">Influx query language string to query</param>
+            /// <returns>URL to call https query on set Influx server</returns>
             public string BuildUrlWithQuery(string query)
             {
-                return Utility.EncodeQuery(host, port.ToString(), false, db, query);
+                return Utility.EncodeQuery(host, port, false, db, query);
             }
+            #endregion //PUBLIC METHODS
         }
     }
 }
