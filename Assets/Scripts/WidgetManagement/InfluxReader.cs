@@ -3,160 +3,248 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using ARDesign.Serialize;
+using ARDesign.Influx;
 
-
-// This ensures type agnostic functions can be run on InfluxReaders - all widgets should inherit from THIS, NOT InfluxReader!
-public abstract class InfluxType<T> : InfluxReader
+namespace ARDesign
 {
-    protected T dataVals;
-    protected abstract void CastWidget();
-
-    // Use this for initialization
-    void Awake()
+    namespace Widgets
     {
-        widget = this.GetComponent<WidgetHandler>();
-        //Debug.Log("Start called on " + widget.name);
-        CastWidget();
-    }
+        /// <summary>
+        /// This ensures type agnostic functions can be run on InfluxReaders - 
+        /// All widgets should inherit from THIS, NOT InfluxReader!
+        /// </summary>
+        /// <typeparam name="T">Data type</typeparam>
+        public abstract class InfluxType<T> : InfluxReader
+        {
+            protected T dataVals;
 
-    public T GetData()
-    {
-        return dataVals;
-    }
+            protected abstract void CastWidget();
 
+            #region UNITY_MONOBEHAVIOUR_METHODS
+            // Use this for initialization
+            void Awake()
+            {
+                widget = this.GetComponent<WidgetHandler>();
+                //Debug.Log("Start called on " + widget.name);
+                CastWidget();
+            }
+            #endregion //UNITY_MONOBEHAVIOUR_METHODS
+
+            #region PUBLIC_METHODS
+            /// <summary>
+            /// Returns the data for the widget
+            /// </summary>
+            /// <returns>dataVals for this widget, of type specified in InfluxType</returns>
+            public T GetData()
+            {
+                return dataVals;
+            }
+            #endregion //PUBLIC_METHODS
+        }
+
+        /// <summary>
+        /// Abstract class for querying Influx data to widgets.
+        /// Includes implemented methods for building useful queries - see Query Helper Functions
+        /// </summary>
+        public abstract class InfluxReader : MonoBehaviour
+        {
+            //determines if widget needs to be updated or is static
+            public bool toUpdate = false;
+            [NonSerialized]
+            public bool isDataBuilt = false;
+            [NonSerialized]
+            public bool isSetup = false;
+
+            #region PRIVATE_MEMBER_VARIABLES
+            protected string measure;
+            protected string building;
+            protected string room;
+            private InfluxSetup parent = null;
+
+            private string urlToQuery;
+            private string urlToUpdate;
+
+            protected WidgetHandler widget;
+            #endregion //PRIVATE_MEMBER_VARIABLES
+
+            #region PUBLIC_METHODS
+            /// <summary>
+            /// Sets the base database values - should be called before anything else!
+            /// </summary>
+            /// <param name="m">Measure name</param>
+            /// <param name="b">Building</param>
+            /// <param name="r">Room</param>
+            public void SetDBVals(string m, string b, string r)
+            {
+                parent = gameObject.GetComponentInParent<InfluxSetup>();
+                measure = m;
+                building = b;
+                room = r;
+
+                urlToQuery = SetQueryUrl();
+                urlToUpdate = SetQueryUrl();
+            }
+
+            /// <summary>
+            /// Update the values in the widget, by querying the database.
+            /// </summary>
+            public void UpdateVals()
+            {
+                StartCoroutine(RefreshCurVals());
+            }
+
+            /// <summary>
+            /// Set the values in the widget, by querying the database.
+            /// Heavy overhead, depending on data type
+            /// </summary>
+            public void SetVals()
+            {
+                StartCoroutine(BuildValues());
+                isSetup = true;
+            }
+            #endregion //PUBLIC_METHODS
+
+            #region ABSTRACT_METHODS
+            /// <summary>
+            /// Sets the URL and query for setting up the widget
+            /// Called automatically on widget creation
+            /// </summary>
+            /// <returns>URL for setup query</returns>
+            protected abstract string SetQueryUrl();
+
+            /// <summary>
+            /// Sets the URL and query for updating up the widget
+            /// Called automatically on widget creation
+            /// </summary>
+            /// <returns>URL for update query</returns>
+            protected abstract string SetUpdateUrl();
+
+            /// <summary>
+            /// Call back function for building the widget
+            /// </summary>
+            /// <param name="webReturn">Result from setup query</param>
+            protected abstract void ParseSetUpText(string webReturn);
+
+            /// <summary>
+            /// Call back function for updating the widget
+            /// </summary>
+            /// <param name="webReturn">Result from update query</param>
+            protected abstract void ParseUpdateText(string webReturn);
+
+            #endregion //ABSTRACT_METHODS
+
+            #region PRIVATE_METHODS
+            /// <summary>
+            /// Updates values
+            /// </summary>
+            /// <returns></returns>
+            private IEnumerator RefreshCurVals()
+            {
+                WWW web = new WWW(urlToUpdate);
+                yield return web;
+
+                if (web.error != null)
+                {
+                    Debug.Log(web.error);
+                }
+                else
+                {
+                    ParseUpdateText(web.text);
+                }
+
+            }
+
+            /// <summary>
+            /// Builds all values from the setup query
+            /// </summary>
+            /// <returns></returns>
+            private IEnumerator BuildValues()
+            {
+                WWW web = new WWW(urlToQuery);
+                yield return web;
+                if (web.error != null)
+                {
+                    Debug.Log(web.error);
+                }
+                else
+                {
+                    ParseSetUpText(web.text);
+                }
+            }
+            #endregion //PRIVATE_METHODS
+
+            #region QUERY_HELPER_FUNCTIONS
+
+            /// <summary>
+            /// Builds a https Influx query for the given string
+            /// </summary>
+            /// <param name="query">Influx query to encode</param>
+            /// <returns>URL for the query</returns>
+            protected string BuildUrl(string query)
+            {
+                return parent.BuildUrlWithQuery(query);
+            }
+
+            /// <summary>
+            /// Builds a https Influx query to return a fixed limit of values
+            /// </summary>
+            /// <param name="limit">Number of values to return</param>
+            /// <returns>URL for the query</returns>
+            public string BuildUrlWithLimit(int limit)
+            {
+                return BuildUrl("SELECT type,value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' ORDER BY DESC LIMIT " + limit);
+
+            }
+
+
+            /// <summary>
+            /// Builds a https Influx query to return all values
+            /// </summary>
+            /// <returns>URL for the query</returns>
+            public string BuildUrlWithoutLimit()
+            {
+
+                return BuildUrl("SELECT type,value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' ORDER BY DESC");
+
+            }
+
+            /// <summary>
+            /// Builds a https Influx query to return a fixed limit of values of a given type
+            /// </summary>
+            /// <param name="type">Type of value to fetch</param>
+            /// <param name="limit">Number of values to return</param>
+            /// <returns>URL for the query</returns>
+            public string BuildUrlWithLimitSetType(string type, int limit)
+            {
+                return BuildUrl("SELECT value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' AND \"type\"=\'" + type + "\' ORDER BY DESC LIMIT " + limit);
+
+            }
+
+            /// <summary>
+            /// Builds a https Influx query to return all values of a given type
+            /// </summary>
+            /// <param name="type">Type of value to fetch</param>
+            /// <returns>URL for the query</returns>
+            public string BuildUrlWithoutLimitSetType(string type)
+            {
+
+                return BuildUrl("SELECT value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' AND \"type\"=\'" + type + "\' ORDER BY DESC");
+
+            }
+
+            /// <summary>
+            /// Builds a https Influx query to return all tags for a given key
+            /// Use for building list of types in a measurement
+            /// </summary>
+            /// <param name="keyName">Key to fetch tags for</param>
+            /// <returns>URL for the query</returns>
+            public string BuildUrlTagList(string keyName)
+            {
+                return BuildUrl("SHOW TAG VALUES FROM " + measure + " WITH KEY = \"" + keyName + "\"");
+            }
+            #endregion //QUERY_HELPER_FUNCTIONS
+        }
+    }
 }
-
-public abstract class InfluxReader : MonoBehaviour {
-
-    //determines if widget needs to be updated or is static
-    public bool toUpdate = false;
-
-    protected string measure;
-    protected string building;
-    protected string room;
-    private InfluxSetup parent = null;
-
-    private string urlToQuery;
-    private string urlToUpdate;
-
-    protected WidgetHandler widget;
-
-    [NonSerialized]
-    public bool isDataBuilt = false;
-    [NonSerialized]
-    public bool isSetup = false;
-
-
-    // Sets the base database values - should be called before anything else!
-    public void SetDBVals(string m, string b, string r)
-    {
-        parent = gameObject.GetComponentInParent<InfluxSetup>();
-        measure = m;
-        building = b;
-        room = r;
-
-        urlToQuery = SetQueryUrl();
-        urlToUpdate = SetQueryUrl();
-    }
-
-    //Sets the string for querying the DB
-    protected abstract string SetQueryUrl();
-
-    //Sets the update string
-    protected abstract string SetUpdateUrl();
-
-    // Update the values in the widget, by querying the database
-    public void UpdateVals()
-    {
-        StartCoroutine(RefreshCurVals());
-    }
-
-    // Set the values in the widget, by querying the database
-    public void SetVals()
-    {
-        StartCoroutine(BuildValues());
-        isSetup = true;
-    }
-
-    //Call back function for updating the widget - webResult is the raw JSON from the webrequest
-    protected abstract void ParseUpdateText(string webResult);
-
-    IEnumerator RefreshCurVals()
-    {
-        WWW web = new WWW(urlToUpdate);
-        yield return web;
-
-        if (web.error != null)
-        {
-            Debug.Log(web.error);
-        }
-        else
-        {
-            ParseUpdateText(web.text);
-        }
-
-    }
-
-    IEnumerator BuildValues()
-    {
-        WWW web = new WWW(urlToQuery);
-        yield return web;
-        if (web.error != null)
-        {
-            Debug.Log(web.error);
-        }
-        else
-        {
-            ParseSetUpText(web.text);
-        }
-    }
-
-    protected abstract void ParseSetUpText(string webReturn);
-
-
-    // QUERY HELPER FUNCTIONS
-
-
-    protected string BuildUrl(string query)
-    {
-        return parent.BuildUrlWithQuery(query);
-    }
-
-    // Builds URLs for widgets to query with a fixed limit on values
-    public string BuildUrlWithLimit(int limit)
-    {
-        return BuildUrl("SELECT type,value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' ORDER BY DESC LIMIT " + limit);
-
-    }
-
-    // Builds URLs for widgets to query with out a fixed limit on values
-    public string BuildUrlWithoutLimit()
-    {
-
-        return BuildUrl("SELECT type,value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' ORDER BY DESC");
-
-    }
-
-    // Builds URLs for widgets to query with a fixed limit on values
-    public string BuildUrlWithLimitSetType(string type, int limit)
-    {
-        return BuildUrl("SELECT value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' AND \"type\"=\'" + type + "\' ORDER BY DESC LIMIT " + limit);
-
-    }
-
-    // Builds URLs for widgets to query with out a fixed limit on values with set type
-    public string BuildUrlWithoutLimitSetType(string type)
-    {
-
-        return BuildUrl("SELECT value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' AND \"type\"=\'" + type + "\' ORDER BY DESC");
-
-    }
-
-    // Builds list of unique tags - to use for getting labels
-    public string BuildUrlTagList(string keyName)
-    {
-        return BuildUrl("SHOW TAG VALUES FROM " + measure + " WITH KEY = \"" + keyName + "\"");
-    }
-}
-
 
