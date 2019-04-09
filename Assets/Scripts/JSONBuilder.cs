@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using Newtonsoft.Json.Linq;
 using System.Linq;
-using System.Web;
 using UnityEngine.Networking;
-using System.Security.Policy;
 using ARDesign.Widgets;
 using ARDesign.Serialize;
-using ARDesign.Serialize.Utility;
+using ARDesign.Influx;
 
 namespace ARDesign
 {
@@ -20,8 +17,6 @@ namespace ARDesign
 
         [SerializeField] // Prefab to be used for building widgets
         private GameObject widgetPrefab;
-        [SerializeField]
-        private string requestUrl = "https://ardesign-config.herokuapp.com/api/scenes/";
 
         [SerializeField]
         private GameObject success;
@@ -81,7 +76,7 @@ namespace ARDesign
         //Called on QR detection
         public void InitializeScene(string json, GameObject origin)
         {
-            DBScene scene = JSONHelper.CreateFromJSON(json);
+            DBScene scene = Serialize.Utility.CreateFromJSON(json);
             BuildScene(scene, origin);
             StartCoroutine(SetUpWidgets());
             Debug.Log("Finish init");
@@ -182,7 +177,7 @@ namespace ARDesign
         {
             // create web request object with HTTP verb GET and URL 
             id = id.Substring(0, 24); // needs to be changed depending on id string length
-            UnityWebRequest www = UnityWebRequest.Get(requestUrl + id);
+            UnityWebRequest www = Receiver.GetFromId(id);
             Debug.Log("Created Web Request object for: " + www.url);
 
             www.downloadHandler = new DownloadHandlerBuffer();

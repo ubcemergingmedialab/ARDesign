@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using ARDesign.Serialize;
+using ARDesign.Influx;
 
 namespace ARDesign.Widgets
 {

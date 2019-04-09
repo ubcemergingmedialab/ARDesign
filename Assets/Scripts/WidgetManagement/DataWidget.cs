@@ -1,4 +1,4 @@
-﻿using ARDesign.Serialize.Utility;
+﻿using ARDesign.Influx;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +19,7 @@ namespace ARDesign.Widgets {
 
         protected override void ParseSetUpText(string webReturn)
         {
-            dataVals = JSONHelper.ParseValuesNoType(webReturn);
+            dataVals = Utility.ParseValuesNoType(webReturn);
         
             isDataBuilt = true;
             SetCurrentValues();
@@ -29,7 +29,7 @@ namespace ARDesign.Widgets {
 
         protected override void ParseUpdateText(string webResult)
         {
-            dataVals = JSONHelper.ParseValuesNoType(webResult, dataVals);
+            dataVals = Utility.ParseValuesNoType(webResult, dataVals);
             SetCurrentValues();
         }
 

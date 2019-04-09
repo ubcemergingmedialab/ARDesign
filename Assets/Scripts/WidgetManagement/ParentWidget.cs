@@ -1,4 +1,4 @@
-﻿using ARDesign.Serialize.Utility;
+﻿using ARDesign.Influx;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +18,7 @@ namespace ARDesign.Widgets
 
         protected override void ParseSetUpText(string webReturn)
         {
-            dataVals = JSONHelper.ParseLabels(webReturn);
+            dataVals = Utility.ParseLabels(webReturn);
             //Debug.Log(webReturn);
             wid.BuildChildren(dataVals);
 
