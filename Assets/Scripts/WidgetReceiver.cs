@@ -1,4 +1,5 @@
-﻿using HoloToolkit.Unity.InputModule;
+﻿using ARDesign.Widgets;
+using HoloToolkit.Unity.InputModule;
 using HoloToolkit.Unity.Receivers;
 using System;
 using System.Collections;
@@ -12,12 +13,14 @@ public class WidgetReceiver : InteractionReceiver
     [SerializeField]
     private GameObject widgetobj;
 
+    #region PRIVATE_MEMBER_VARIABLES
     private DataWidgetHandler handler;
     private DataWidget wid;
-
     private HandDraggable handDraggable;
     private bool isDraggable = false;
+    #endregion //PRIVATE_MEMBER_VARIABLES
 
+    #region UNITY_MONOBEHAVIOUR_METHODS
     private void Start()
     {
         wid = widgetobj.GetComponent <DataWidget>();
@@ -57,9 +60,10 @@ public class WidgetReceiver : InteractionReceiver
                 break;
         }
 
-
     }
+    #endregion //UNITY_MONOBEHAVIOUR_METHODS
 
+    #region PRIVATE_METHODS
     private void ResizeAction()
     {
         throw new NotImplementedException();
@@ -89,6 +93,7 @@ public class WidgetReceiver : InteractionReceiver
         handDraggable.enabled = !isDraggable;
         isDraggable = !isDraggable;
     }
+    #endregion //PRIVATE_METHODS
 
 
 }
