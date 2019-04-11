@@ -1,0 +1,4 @@
+<map id="ARDesign.Widgets.ParentWidgetHandler.BuildChildren" name="ARDesign.Widgets.ParentWidgetHandler.BuildChildren">
+<area shape="rect" id="node1" title="Builds a child widget for each label" alt="" coords="272,5,487,47"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_widgets_1_1_parent_widget.html#ab7bee1eb11b57311089304da82190e51" title="Pareses the setup query and builds the widget and all its children" alt="" coords="5,5,224,47"/>
+</map>

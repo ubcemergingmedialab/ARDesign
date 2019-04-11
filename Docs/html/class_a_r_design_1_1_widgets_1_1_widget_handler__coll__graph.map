@@ -1,0 +1,5 @@
+<map id="ARDesign.Widgets.WidgetHandler" name="ARDesign.Widgets.WidgetHandler">
+<area shape="rect" id="node1" title="Refers to general data&#45;agnostic widget functionality" alt="" coords="5,81,227,108"/>
+<area shape="rect" id="node3" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html" title="Abstract class for querying Influx data to widgets. Includes implemented methods for building useful ..." alt="" coords="65,171,271,197"/>
+<area shape="rect" id="node2" title=" " alt="" coords="163,5,274,32"/>
+</map>

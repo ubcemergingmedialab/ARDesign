@@ -1,0 +1,18 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,132,57"/>
+<area shape="rect" id="node2" href="$class_widget_activate_input_handler.html" title=" " alt="" coords="200,5,381,32"/>
+<area shape="rect" id="node3" href="$class_widget_drag_input_handler.html" title=" " alt="" coords="209,56,372,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="13,284,124,311"/>
+<area shape="rect" id="node5" href="$class_a_r_design_1_1_influx_1_1_influx_setup.html" title="Object for storing scene configuration settings &#45; should be parent to widgets" alt="" coords="199,411,382,437"/>
+<area shape="rect" id="node6" href="$class_a_r_design_1_1_j_s_o_n_builder.html" title="Singleton object for handling scene loading and widget creation" alt="" coords="211,461,370,488"/>
+<area shape="rect" id="node7" href="$class_a_r_design_1_1_serialize_1_1_variable_manager.html" title="Persistent singleton object that stores scene configuration info. ARDesign&#45;setup can be seen as essen..." alt="" coords="198,513,383,554"/>
+<area shape="rect" id="node8" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html" title="Abstract class for querying Influx data to widgets. Includes implemented methods for building useful ..." alt="" coords="187,579,394,605"/>
+<area shape="rect" id="node10" href="$class_a_r_design_1_1_widgets_1_1_widget_handler.html" title="Refers to general data&#45;agnostic widget functionality" alt="" coords="180,107,401,133"/>
+<area shape="rect" id="node12" href="$class_connector_behaviour.html" title="Draws a line from the widget to the rootnode, updating as widget position changes" alt="" coords="222,157,359,184"/>
+<area shape="rect" id="node13" href="$class_origin.html" title=" " alt="" coords="263,208,319,235"/>
+<area shape="rect" id="node14" href="$class_test_camera_movement.html" title=" " alt="" coords="215,259,366,285"/>
+<area shape="rect" id="node15" href="$class_test_widget_enable.html" title=" " alt="" coords="227,309,355,336"/>
+<area shape="rect" id="node16" href="$class_vu_mark_handler.html" title="A custom handler which uses the vuMarkManager." alt="" coords="235,360,346,387"/>
+<area shape="rect" id="node9" href="$class_a_r_design_1_1_widgets_1_1_influx_type.html" title="This ensures type agnostic functions can be run on InfluxReaders &#45; All widgets should inherit from TH..." alt="" coords="455,579,680,605"/>
+<area shape="rect" id="node11" href="$class_a_r_design_1_1_widgets_1_1_widget_type.html" title="Typed widget handler class. Type indicates form of Widget content and should derive from InfluxReader" alt="" coords="449,107,685,133"/>
+</map>

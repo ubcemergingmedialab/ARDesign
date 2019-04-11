@@ -1,8 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="ARDesign.Serialize.DBScene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_a_r_design_1_1_serialize_1_1_d_b_scene.html",tooltip="Struct for storing configuration of a room - designed for deserializing from JSON"];
-}
