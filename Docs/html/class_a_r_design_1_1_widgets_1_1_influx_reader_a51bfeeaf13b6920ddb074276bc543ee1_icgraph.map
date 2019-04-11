@@ -1,4 +1,0 @@
-<map id="ARDesign.Widgets.InfluxReader.UpdateVals" name="ARDesign.Widgets.InfluxReader.UpdateVals">
-<area shape="rect" id="node1" title="Update the values in the widget, by querying the database." alt="" coords="256,5,467,47"/>
-<area shape="rect" id="node2" href="$class_a_r_design_1_1_j_s_o_n_builder.html#a7fbdb4527f4033b928c624ca878730b9" title="Updates all widgets that are set to update" alt="" coords="5,5,208,47"/>
-</map>

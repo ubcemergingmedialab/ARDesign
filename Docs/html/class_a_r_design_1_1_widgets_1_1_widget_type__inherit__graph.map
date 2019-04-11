@@ -1,5 +1,0 @@
-<map id="ARDesign.Widgets.WidgetType&lt; T &gt;" name="ARDesign.Widgets.WidgetType&lt; T &gt;">
-<area shape="rect" id="node1" title="Typed widget handler class. Type indicates form of Widget content and should derive from InfluxReader" alt="" coords="5,155,241,181"/>
-<area shape="rect" id="node2" href="$class_a_r_design_1_1_widgets_1_1_widget_handler.html" title="Refers to general data&#45;agnostic widget functionality" alt="" coords="70,80,177,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="68,5,179,32"/>
-</map>

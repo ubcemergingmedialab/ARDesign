@@ -1,4 +1,0 @@
-<map id="ARDesign.Widgets.WidgetHandler.EnableWidget" name="ARDesign.Widgets.WidgetHandler.EnableWidget">
-<area shape="rect" id="node1" title="Turns widget off and on &#45; default behavior hides widget object but exposes root node...." alt="" coords="239,5,464,47"/>
-<area shape="rect" id="node2" href="$class_widget_activate_input_handler.html#a5da082efb21a9411f36ef57fbd1531a0" title=" " alt="" coords="5,5,191,47"/>
-</map>

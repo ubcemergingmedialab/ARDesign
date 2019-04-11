@@ -1,4 +1,0 @@
-<map id="ConnectorBehaviour" name="ConnectorBehaviour">
-<area shape="rect" id="node1" title="Draws a line from the widget to the rootnode, updating as widget position changes" alt="" coords="5,80,143,107"/>
-<area shape="rect" id="node2" title=" " alt="" coords="19,5,129,32"/>
-</map>

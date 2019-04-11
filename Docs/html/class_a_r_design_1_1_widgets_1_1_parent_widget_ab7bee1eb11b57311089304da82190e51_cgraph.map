@@ -1,4 +1,0 @@
-<map id="ARDesign.Widgets.ParentWidget.ParseSetUpText" name="ARDesign.Widgets.ParentWidget.ParseSetUpText">
-<area shape="rect" id="node1" title="Pareses the setup query and builds the widget and all its children" alt="" coords="5,5,224,47"/>
-<area shape="rect" id="node2" href="$class_a_r_design_1_1_widgets_1_1_parent_widget_handler.html#a664ff9911d8fd51b1459f3cbc0d2985a" title="Builds a child widget for each label" alt="" coords="272,5,487,47"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="ARDesign.JSONBuilder.GetText" name="ARDesign.JSONBuilder.GetText">
-<area shape="rect" id="node1" title="Starts get request to fetch config for a given ID" alt="" coords="408,5,616,32"/>
-<area shape="rect" id="node2" href="$class_origin.html#a0d3c1f863a67c783024ffeb9aaa36543" title="This method associates the parent VuMarkId to Origin" alt="" coords="283,5,360,32"/>
-<area shape="rect" id="node3" href="$class_vu_mark_handler.html#a9a86655a5aefb8f8ced80bfe0458d389" title="This method will be called whenever a new VuMark is detected" alt="" coords="5,5,235,32"/>
-</map>

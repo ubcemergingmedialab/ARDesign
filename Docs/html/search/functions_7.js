@@ -1,5 +1,0 @@
-var searchData=
-[
-  ['parsesetuptext',['ParseSetUpText',['../class_a_r_design_1_1_widgets_1_1_data_widget.html#afdc7d727d064166a4b7018a691a2a569',1,'ARDesign.Widgets.DataWidget.ParseSetUpText()'],['../class_a_r_design_1_1_widgets_1_1_influx_reader.html#a68d0ec9a1250706468ef5a626cfa128e',1,'ARDesign.Widgets.InfluxReader.ParseSetUpText()'],['../class_a_r_design_1_1_widgets_1_1_parent_widget.html#ab7bee1eb11b57311089304da82190e51',1,'ARDesign.Widgets.ParentWidget.ParseSetUpText()']]],
-  ['parseupdatetext',['ParseUpdateText',['../class_a_r_design_1_1_widgets_1_1_data_widget.html#a201b90c9e9a84c1e2c39899e3ad822d2',1,'ARDesign.Widgets.DataWidget.ParseUpdateText()'],['../class_a_r_design_1_1_widgets_1_1_influx_reader.html#acedd71e0b4c9fac2ad0e5007b3467fdb',1,'ARDesign.Widgets.InfluxReader.ParseUpdateText()'],['../class_a_r_design_1_1_widgets_1_1_parent_widget.html#af1511f2fa3e002e89612ce4dbc338f16',1,'ARDesign.Widgets.ParentWidget.ParseUpdateText()']]]
-];
