@@ -1,0 +1,4 @@
+<map id="ARDesign.JSONBuilder.UpdateWidgets" name="ARDesign.JSONBuilder.UpdateWidgets">
+<area shape="rect" id="node1" title="Updates all widgets that are set to update" alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a51bfeeaf13b6920ddb074276bc543ee1" title="Update the values in the widget, by querying the database." alt="" coords="256,5,467,47"/>
+</map>

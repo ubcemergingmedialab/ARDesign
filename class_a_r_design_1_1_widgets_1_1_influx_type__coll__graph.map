@@ -1,0 +1,7 @@
+<map id="ARDesign.Widgets.InfluxType&lt; T &gt;" name="ARDesign.Widgets.InfluxType&lt; T &gt;">
+<area shape="rect" id="node1" title="This ensures type agnostic functions can be run on InfluxReaders &#45; All widgets should inherit from TH..." alt="" coords="5,247,231,273"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html" title="Abstract class for querying Influx data to widgets. Includes implemented methods for building useful ..." alt="" coords="71,171,165,197"/>
+<area shape="rect" id="node3" title=" " alt="" coords="199,5,309,32"/>
+<area shape="rect" id="node4" href="$class_a_r_design_1_1_widgets_1_1_widget_handler.html" title="Refers to general data&#45;agnostic widget functionality" alt="" coords="143,81,365,108"/>
+<area shape="rect" id="node5" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html" title="Abstract class for querying Influx data to widgets. Includes implemented methods for building useful ..." alt="" coords="203,171,409,197"/>
+</map>

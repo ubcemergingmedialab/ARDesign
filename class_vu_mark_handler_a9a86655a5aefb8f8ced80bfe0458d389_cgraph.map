@@ -1,0 +1,5 @@
+<map id="VuMarkHandler.OnVuMarkDetected" name="VuMarkHandler.OnVuMarkDetected">
+<area shape="rect" id="node1" title="This method will be called whenever a new VuMark is detected" alt="" coords="5,5,235,32"/>
+<area shape="rect" id="node2" href="$class_origin.html#a0d3c1f863a67c783024ffeb9aaa36543" title="This method associates the parent VuMarkId to Origin" alt="" coords="283,5,360,32"/>
+<area shape="rect" id="node3" href="$class_a_r_design_1_1_j_s_o_n_builder.html#a88e2d99e0566eacd27266983f5fe044d" title="Starts get request to fetch config for a given ID" alt="" coords="408,5,616,32"/>
+</map>
