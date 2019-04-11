@@ -1,0 +1,18 @@
+digraph "ARDesign.Widgets.WidgetType&lt; T &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node3 [label="ARDesign.Widgets.WidgetType\< T \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Typed widget handler class. Type indicates form of Widget content and should derive from InfluxReader"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="WidgetHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_r_design_1_1_widgets_1_1_widget_handler.html",tooltip="Refers to general data-agnostic widget functionality"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="MonoBehaviour",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" influxWidget" ,fontname="Helvetica"];
+  Node6 [label="ARDesign.Widgets.InfluxReader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_r_design_1_1_widgets_1_1_influx_reader.html",tooltip="Abstract class for querying Influx data to widgets. Includes implemented methods for building useful ..."];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" widget" ,fontname="Helvetica"];
+  Node7 [label="ARDesign.Widgets.WidgetHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_r_design_1_1_widgets_1_1_widget_handler.html",tooltip="Refers to general data-agnostic widget functionality"];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" influxWidget" ,fontname="Helvetica"];
+}

@@ -1,0 +1,10 @@
+digraph "WidgetActivateInputHandler.OnInputClicked"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="WidgetActivateInputHandler.\lOnInputClicked",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="ARDesign.Widgets.WidgetHandler.\lEnableWidget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_r_design_1_1_widgets_1_1_widget_handler.html#aa255dd720a308896366bc5cca1307937",tooltip="Turns widget off and on - default behavior hides widget object but exposes root node...."];
+}
