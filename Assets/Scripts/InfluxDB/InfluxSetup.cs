@@ -11,12 +11,72 @@ namespace ARDesign
         public class InfluxSetup : MonoBehaviour
         {
             #region PRIVATE_MEMBER_VARIABLES
+            private DBScene scene;
             [SerializeField]
-            private string host;
+            private string Host
+            {
+                get
+                {
+                    return scene.Host;
+                }
+
+                set
+                {
+                    scene.Host = value;
+                }
+            }
             [SerializeField]
-            private string port = "8086";
+            private string Port
+            {
+                get
+                {
+                    return scene.Port;
+                }
+
+                set
+                {
+                    scene.Port = value;
+                }
+            }
             [SerializeField]
-            private string db;
+            private string DB
+            {
+                get
+                {
+                    return scene.Db;
+                }
+
+                set
+                {
+                    scene.Db = value;
+                }
+            }
+            [SerializeField]
+            private string Building
+            {
+                get
+                {
+                    return scene.Building;
+                }
+
+                set
+                {
+                    scene.Building = value;
+                }
+            }
+            [SerializeField]
+            private string Room
+            {
+                get
+                {
+                    return scene.Room;
+                }
+
+                set
+                {
+                    scene.Room = value;
+                }
+            }
             #endregion //PRIVATE MEMBER VARIABLES
 
             #region PUBLIC_METHODS
@@ -26,23 +86,24 @@ namespace ARDesign
             /// <param name="sceneToBuild">DBScene object - should be deserializated from setup</param>
             public void Setup(DBScene sceneToBuild)
             {
-                host = sceneToBuild.Host;
-                port = sceneToBuild.Port;
-                db = sceneToBuild.Db;
+                scene = sceneToBuild;
             }
-         
+
             /// <summary>
             /// Manually sets Influx server values
             /// </summary>
             /// <param name="h">Host address to set</param>
             /// <param name="p">Port address to set</param>
             /// <param name="d">Database name to set</param>
-            public void Setup(string h, string p, string d)
+            /// <param name="b">Building name to set</param>
+            /// <param name="r">Room name to set</param>
+            public void Setup(string h, string p, string d, string b, string r)
             {
-                host = h;
-                port = p;
-                db = d;
-
+                scene.Host = h;
+                scene.Port = p;
+                scene.Db = d;
+                scene.Building = b;
+                scene.Room = r;
             }
 
             /// <summary>
@@ -52,7 +113,7 @@ namespace ARDesign
             /// <returns>URL to call https query on set Influx server</returns>
             public string BuildUrlWithQuery(string query)
             {
-                return Utility.EncodeQuery(host, port, false, db, query);
+                return Utility.EncodeQuery(Host, Port, false, DB, query);
             }
             #endregion //PUBLIC METHODS
         }
