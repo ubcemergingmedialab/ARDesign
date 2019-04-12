@@ -72,7 +72,7 @@ namespace ARDesign
             /// <param name="child">DataWidget child</param>
             private void SetupChildWidget(DataWidget child)
             {
-                child.SetDBVals(measure, building, room);
+                child.SetDBVals(measure,parent);
             }
 
             /// <summary>

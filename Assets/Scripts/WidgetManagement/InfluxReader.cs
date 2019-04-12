@@ -58,9 +58,7 @@ namespace ARDesign
 
             #region PRIVATE_MEMBER_VARIABLES
             protected string measure;
-            protected string building;
-            protected string room;
-            private InfluxSetup parent = null;
+            protected InfluxSetup parent = null;
 
             private string urlToQuery;
             private string urlToUpdate;
@@ -73,14 +71,25 @@ namespace ARDesign
             /// Sets the base database values - should be called before anything else!
             /// </summary>
             /// <param name="m">Measure name</param>
-            /// <param name="b">Building</param>
-            /// <param name="r">Room</param>
-            public void SetDBVals(string m, string b, string r)
+            public void SetDBVals(string m)
             {
                 parent = gameObject.GetComponentInParent<InfluxSetup>();
                 measure = m;
-                building = b;
-                room = r;
+
+                urlToQuery = SetQueryUrl();
+                urlToUpdate = SetQueryUrl();
+            }
+
+            /// <summary>
+            /// Sets the base database values - should be called before anything else!
+            /// For use in child widgets, where the parent is likely another widget
+            /// </summary>
+            /// <param name="m">Measure name</param>
+            /// <param name="parent">Database configuration container</param>
+            public void SetDBVals(string m, InfluxSetup parent)
+            {
+                this.parent = parent;
+                measure = m;
 
                 urlToQuery = SetQueryUrl();
                 urlToUpdate = SetQueryUrl();
@@ -193,7 +202,7 @@ namespace ARDesign
             /// <returns>URL for the query</returns>
             public string BuildUrlWithLimit(int limit)
             {
-                return BuildUrl("SELECT type,value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' ORDER BY DESC LIMIT " + limit);
+                return BuildUrl("SELECT type,value FROM " + measure + " WHERE \"building\"=\'" + parent.Building + "\' AND \"room\"=\'" + parent.Room + "\' ORDER BY DESC LIMIT " + limit);
 
             }
 
@@ -205,7 +214,7 @@ namespace ARDesign
             public string BuildUrlWithoutLimit()
             {
 
-                return BuildUrl("SELECT type,value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' ORDER BY DESC");
+                return BuildUrl("SELECT type,value FROM " + measure + " WHERE \"building\"=\'" + parent.Building + "\' AND \"room\"=\'" + parent.Room + "\' ORDER BY DESC");
 
             }
 
@@ -217,7 +226,7 @@ namespace ARDesign
             /// <returns>URL for the query</returns>
             public string BuildUrlWithLimitSetType(string type, int limit)
             {
-                return BuildUrl("SELECT value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' AND \"type\"=\'" + type + "\' ORDER BY DESC LIMIT " + limit);
+                return BuildUrl("SELECT value FROM " + measure + " WHERE \"building\"=\'" + parent.Building + "\' AND \"room\"=\'" + parent.Room + "\' AND \"type\"=\'" + type + "\' ORDER BY DESC LIMIT " + limit);
 
             }
 
@@ -229,7 +238,7 @@ namespace ARDesign
             public string BuildUrlWithoutLimitSetType(string type)
             {
 
-                return BuildUrl("SELECT value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' AND \"type\"=\'" + type + "\' ORDER BY DESC");
+                return BuildUrl("SELECT value FROM " + measure + " WHERE \"building\"=\'" + parent.Building + "\' AND \"room\"=\'" + parent.Room + "\' AND \"type\"=\'" + type + "\' ORDER BY DESC");
 
             }
 

@@ -10,6 +10,32 @@ namespace ARDesign
         /// </summary>
         public class InfluxSetup : MonoBehaviour
         {
+            [SerializeField]
+            public string Building
+            {
+                get
+                {
+                    return scene.Building;
+                }
+
+                set
+                {
+                    scene.Building = value;
+                }
+            }
+            [SerializeField]
+            public string Room
+            {
+                get
+                {
+                    return scene.Room;
+                }
+
+                set
+                {
+                    scene.Room = value;
+                }
+            }
             #region PRIVATE_MEMBER_VARIABLES
             private DBScene scene;
             [SerializeField]
@@ -51,33 +77,8 @@ namespace ARDesign
                     scene.Db = value;
                 }
             }
-            [SerializeField]
-            private string Building
-            {
-                get
-                {
-                    return scene.Building;
-                }
-
-                set
-                {
-                    scene.Building = value;
-                }
-            }
-            [SerializeField]
-            private string Room
-            {
-                get
-                {
-                    return scene.Room;
-                }
-
-                set
-                {
-                    scene.Room = value;
-                }
-            }
             #endregion //PRIVATE MEMBER VARIABLES
+
 
             #region PUBLIC_METHODS
             /// <summary>

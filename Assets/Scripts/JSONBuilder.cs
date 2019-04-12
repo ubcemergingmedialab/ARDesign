@@ -211,7 +211,7 @@ namespace ARDesign
             newWidget.transform.parent = sceneObj.transform;
             newWidget.transform.localPosition = wid.Position;
             InfluxReader r = newWidget.GetComponent<InfluxReader>();
-            r.SetDBVals(wid.Measure, wid.Building, wid.Room);
+            r.SetDBVals(wid.Measure);
             widgets.Add(r);
         }
 
