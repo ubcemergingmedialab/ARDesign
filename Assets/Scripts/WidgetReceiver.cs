@@ -32,7 +32,7 @@ public class WidgetReceiver : InteractionReceiver
         handDraggable.enabled = isDraggable;
 
         // When finished dragging, handDraggable should be disabled
-        handDraggable.StoppedDragging += stopDragging;
+        handDraggable.StoppedDragging += StopDragging;
     }
 
     protected override void InputDown(GameObject obj, InputEventData eventData)
@@ -79,7 +79,7 @@ public class WidgetReceiver : InteractionReceiver
         throw new NotImplementedException();
     }
 
-    private void stopDragging()
+    private void StopDragging()
     {
         handDraggable.enabled = false;
     }
