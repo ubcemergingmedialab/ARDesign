@@ -1,4 +1,5 @@
 <map id="ARDesign.Widgets.DataWidget.ParseSetUpText" name="ARDesign.Widgets.DataWidget.ParseSetUpText">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,213,47"/>
-<area shape="rect" id="node2" href="$class_a_r_design_1_1_widgets_1_1_data_widget.html#a470038a1f28517abfa008b55171b2b61" title="Sets the widget current value &#45; the newest dictionary entry" alt="" coords="261,5,469,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,213,80"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_influx_1_1_utility.html#a71b3530e5c6755f030baf6ee7952fcae" title="Parses the values from a given json string &#45; for use in populating widgets" alt="" coords="288,5,443,47"/>
+<area shape="rect" id="node3" href="$class_a_r_design_1_1_widgets_1_1_data_widget.html#a470038a1f28517abfa008b55171b2b61" title="Sets the widget current value &#45; the newest dictionary entry" alt="" coords="261,71,469,112"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="VuMarkHandler.OnVuMarkLost" name="VuMarkHandler.OnVuMarkLost">
+<area shape="rect" id="node1" title="This method will be called whenever a tracked VuMark is lost" alt="" coords="5,5,208,32"/>
+<area shape="rect" id="node2" href="$class_vu_mark_handler.html#a9df03dbc92e8933563fe507d8214151c" title=" " alt="" coords="256,5,449,32"/>
+</map>

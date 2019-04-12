@@ -1,0 +1,4 @@
+<map id="ARDesign.Influx.InfluxSetup.BuildUrlWithQuery" name="ARDesign.Influx.InfluxSetup.BuildUrlWithQuery">
+<area shape="rect" id="node1" title="Encodes a given plain text query into a InfluxDB https query" alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_influx_1_1_utility.html#a8b11737cfe6161a52d6096dd24c6fff0" title="Builds https query for use with InfluxDB https query language" alt="" coords="240,5,395,47"/>
+</map>

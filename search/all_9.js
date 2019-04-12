@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['oninputclicked',['OnInputClicked',['../class_widget_activate_input_handler.html#a5da082efb21a9411f36ef57fbd1531a0',1,'WidgetActivateInputHandler.OnInputClicked()'],['../class_widget_drag_input_handler.html#a4df2f0baad17be4665afbfe8c7da3d2d',1,'WidgetDragInputHandler.OnInputClicked()']]],
-  ['onvumarkdetected',['OnVuMarkDetected',['../class_vu_mark_handler.html#a9a86655a5aefb8f8ced80bfe0458d389',1,'VuMarkHandler']]],
-  ['onvumarklost',['OnVuMarkLost',['../class_vu_mark_handler.html#a16efa5c91ed9f2af038dfb5404e5893a',1,'VuMarkHandler']]],
-  ['origin',['Origin',['../class_origin.html',1,'']]],
-  ['origin_2ecs',['Origin.cs',['../_origin_8cs.html',1,'']]]
+  ['measure',['Measure',['../struct_a_r_design_1_1_serialize_1_1_d_b_widget.html#a18de43ab32e146591b29123bf92c8cba',1,'ARDesign.Serialize.DBWidget.Measure()'],['../class_a_r_design_1_1_widgets_1_1_influx_reader.html#ab5835a394845b34ff26d7bdbceddb077',1,'ARDesign.Widgets.InfluxReader.measure()']]]
 ];

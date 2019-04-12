@@ -1,0 +1,4 @@
+<map id="ARDesign.Widgets.InfluxReader.BuildValues" name="ARDesign.Widgets.InfluxReader.BuildValues">
+<area shape="rect" id="node1" title="Builds all values from the setup query" alt="" coords="5,5,216,47"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a68d0ec9a1250706468ef5a626cfa128e" title="Call back function for building the widget" alt="" coords="264,5,475,47"/>
+</map>

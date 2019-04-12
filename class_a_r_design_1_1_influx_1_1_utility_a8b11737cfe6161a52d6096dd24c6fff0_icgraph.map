@@ -1,0 +1,10 @@
+<map id="ARDesign.Influx.Utility.EncodeQuery" name="ARDesign.Influx.Utility.EncodeQuery">
+<area shape="rect" id="node1" title="Builds https query for use with InfluxDB https query language" alt="" coords="757,136,912,177"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_influx_1_1_influx_setup.html#a34bd4d0ec1d933435cf15a2ea3e7186c" title="Encodes a given plain text query into a InfluxDB https query" alt="" coords="523,136,709,177"/>
+<area shape="rect" id="node3" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a784807f0dec5015e392c5a70a2374b6a" title="Builds a https Influx query for the given string" alt="" coords="264,136,475,177"/>
+<area shape="rect" id="node4" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a6fa31fc6d73940608eecc3c2c8eb3d35" title="Builds a https Influx query to return a fixed limit of values" alt="" coords="5,5,216,47"/>
+<area shape="rect" id="node5" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a8d0dfafea0c3ae04fd8a90a84dc68512" title="Builds a https Influx query to return all values" alt="" coords="5,71,216,112"/>
+<area shape="rect" id="node6" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a34183a176389e613bd32b6c6561ab432" title="Builds a https Influx query to return a fixed limit of values of a given type" alt="" coords="5,136,216,177"/>
+<area shape="rect" id="node7" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a6592ad91385bd829fc92345371b5f6a2" title="Builds a https Influx query to return all values of a given type" alt="" coords="5,201,216,243"/>
+<area shape="rect" id="node8" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a6fee713ec615620cdb1a39d8fdca7617" title="Builds a https Influx query to return all tags for a given key Use for building list of types in a me..." alt="" coords="5,267,216,308"/>
+</map>

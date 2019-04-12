@@ -1,0 +1,4 @@
+<map id="ARDesign.Widgets.ParentWidget.AddChild" name="ARDesign.Widgets.ParentWidget.AddChild">
+<area shape="rect" id="node1" title="Adds a child widget to the parent" alt="" coords="5,5,224,47"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_widgets_1_1_parent_widget.html#a4e155bf64a9e99234f71555953978715" title="Sets given child data widget to use the same Influx server info as its parent" alt="" coords="272,5,491,47"/>
+</map>

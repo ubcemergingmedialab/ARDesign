@@ -1,0 +1,5 @@
+<map id="ARDesign.Widgets.InfluxReader.SetVals" name="ARDesign.Widgets.InfluxReader.SetVals">
+<area shape="rect" id="node1" title="Set the values in the widget, by querying the database. Heavy overhead, depending on data type" alt="" coords="5,5,216,47"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a9f4299c6a3b11905e024c936443d1a9a" title="Builds all values from the setup query" alt="" coords="264,5,475,47"/>
+<area shape="rect" id="node3" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a68d0ec9a1250706468ef5a626cfa128e" title="Call back function for building the widget" alt="" coords="523,5,733,47"/>
+</map>

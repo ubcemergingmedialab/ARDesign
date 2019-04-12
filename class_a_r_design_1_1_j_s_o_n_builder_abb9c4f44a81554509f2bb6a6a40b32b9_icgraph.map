@@ -1,0 +1,5 @@
+<map id="ARDesign.JSONBuilder.InitializeScene" name="ARDesign.JSONBuilder.InitializeScene">
+<area shape="rect" id="node1" title="Deserializes a scene configuration and builds it on the origin location" alt="" coords="479,5,688,47"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_j_s_o_n_builder.html#aa7db4d5f5e9321a47007ce50ff8cef24" title="Builds a scene with a static json and editor specified object" alt="" coords="244,13,431,39"/>
+<area shape="rect" id="node3" href="$class_a_r_design_1_1_j_s_o_n_builder.html#a671f64255f3d2f0e1823bcca7601911a" title=" " alt="" coords="5,13,196,39"/>
+</map>

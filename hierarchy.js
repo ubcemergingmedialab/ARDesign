@@ -1,5 +1,7 @@
 var hierarchy =
 [
+    [ "ARDesign.Serialize.DBScene", "struct_a_r_design_1_1_serialize_1_1_d_b_scene.html", null ],
+    [ "ARDesign.Serialize.DBWidget", "struct_a_r_design_1_1_serialize_1_1_d_b_widget.html", null ],
     [ "IInputClickHandler", null, [
       [ "WidgetActivateInputHandler", "class_widget_activate_input_handler.html", null ],
       [ "WidgetDragInputHandler", "class_widget_drag_input_handler.html", null ]
@@ -16,6 +18,7 @@ var hierarchy =
     [ "MonoBehaviour", null, [
       [ "ARDesign.Influx.InfluxSetup", "class_a_r_design_1_1_influx_1_1_influx_setup.html", null ],
       [ "ARDesign.JSONBuilder", "class_a_r_design_1_1_j_s_o_n_builder.html", null ],
+      [ "ARDesign.Serialize.VariableManager", "class_a_r_design_1_1_serialize_1_1_variable_manager.html", null ],
       [ "ARDesign.Widgets.InfluxReader", "class_a_r_design_1_1_widgets_1_1_influx_reader.html", [
         [ "ARDesign.Widgets.InfluxType< T >", "class_a_r_design_1_1_widgets_1_1_influx_type.html", null ]
       ] ],
@@ -30,6 +33,10 @@ var hierarchy =
       [ "WidgetActivateInputHandler", "class_widget_activate_input_handler.html", null ],
       [ "WidgetDragInputHandler", "class_widget_drag_input_handler.html", null ]
     ] ],
+    [ "ARDesign.Serialize.Publisher", "class_a_r_design_1_1_serialize_1_1_publisher.html", null ],
+    [ "ARDesign.Serialize.Receiver", "class_a_r_design_1_1_serialize_1_1_receiver.html", null ],
+    [ "ARDesign.Influx.Utility", "class_a_r_design_1_1_influx_1_1_utility.html", null ],
+    [ "ARDesign.Serialize.Utility", "class_a_r_design_1_1_serialize_1_1_utility.html", null ],
     [ "ARDesign.Influx.Values", "struct_a_r_design_1_1_influx_1_1_values.html", null ],
     [ "ARDesign.Widgets.WidgetType< DataWidget >", "class_a_r_design_1_1_widgets_1_1_widget_type.html", [
       [ "ARDesign.Widgets.DataWidgetHandler", "class_a_r_design_1_1_widgets_1_1_data_widget_handler.html", null ]

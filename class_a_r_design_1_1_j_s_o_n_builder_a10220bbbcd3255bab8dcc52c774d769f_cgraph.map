@@ -1,0 +1,7 @@
+<map id="ARDesign.JSONBuilder.SetUpWidgets" name="ARDesign.JSONBuilder.SetUpWidgets">
+<area shape="rect" id="node1" title="Loads data on all widgets" alt="" coords="5,39,188,80"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_j_s_o_n_builder.html#a06c3d1daf6b951437d70c073ade5d498" title="Checks if all widgets are setup" alt="" coords="253,5,430,47"/>
+<area shape="rect" id="node3" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#aea7372a7c87c1fcbe8090c48e876a2d8" title="Set the values in the widget, by querying the database. Heavy overhead, depending on data type" alt="" coords="236,71,447,112"/>
+<area shape="rect" id="node4" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a9f4299c6a3b11905e024c936443d1a9a" title="Builds all values from the setup query" alt="" coords="495,71,705,112"/>
+<area shape="rect" id="node5" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a68d0ec9a1250706468ef5a626cfa128e" title="Call back function for building the widget" alt="" coords="753,71,964,112"/>
+</map>

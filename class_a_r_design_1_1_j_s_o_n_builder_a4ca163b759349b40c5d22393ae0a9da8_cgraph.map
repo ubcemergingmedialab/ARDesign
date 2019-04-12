@@ -1,0 +1,4 @@
+<map id="ARDesign.JSONBuilder.CreateWidgets" name="ARDesign.JSONBuilder.CreateWidgets">
+<area shape="rect" id="node1" title="Creates the widget objects specified in wid as children of the sceneObj This shouldn&#39;t do any computa..." alt="" coords="5,5,205,47"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a6dfcfc73ef0f6e0260df6310a9569df6" title="Sets the base database values &#45; should be called before anything else!" alt="" coords="253,5,464,47"/>
+</map>

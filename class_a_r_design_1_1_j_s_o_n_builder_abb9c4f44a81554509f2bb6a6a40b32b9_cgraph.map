@@ -1,0 +1,9 @@
+<map id="ARDesign.JSONBuilder.InitializeScene" name="ARDesign.JSONBuilder.InitializeScene">
+<area shape="rect" id="node1" title="Deserializes a scene configuration and builds it on the origin location" alt="" coords="5,39,215,80"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_j_s_o_n_builder.html#a8189cc1aca60c6c7bc7d9d356621f8b2" title="Builds an influxSetup component on the given object, and populates it with the configuration specifie..." alt="" coords="263,5,453,47"/>
+<area shape="rect" id="node3" href="$class_a_r_design_1_1_j_s_o_n_builder.html#a10220bbbcd3255bab8dcc52c774d769f" title="Loads data on all widgets" alt="" coords="267,71,449,112"/>
+<area shape="rect" id="node4" href="$class_a_r_design_1_1_j_s_o_n_builder.html#a06c3d1daf6b951437d70c073ade5d498" title="Checks if all widgets are setup" alt="" coords="518,37,695,79"/>
+<area shape="rect" id="node5" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#aea7372a7c87c1fcbe8090c48e876a2d8" title="Set the values in the widget, by querying the database. Heavy overhead, depending on data type" alt="" coords="501,103,712,144"/>
+<area shape="rect" id="node6" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a9f4299c6a3b11905e024c936443d1a9a" title="Builds all values from the setup query" alt="" coords="760,103,971,144"/>
+<area shape="rect" id="node7" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a68d0ec9a1250706468ef5a626cfa128e" title="Call back function for building the widget" alt="" coords="1019,103,1229,144"/>
+</map>

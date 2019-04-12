@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['parentwidget',['ParentWidget',['../class_a_r_design_1_1_widgets_1_1_parent_widget.html',1,'ARDesign::Widgets']]],
-  ['parentwidget_2ecs',['ParentWidget.cs',['../_parent_widget_8cs.html',1,'']]],
-  ['parentwidgethandler',['ParentWidgetHandler',['../class_a_r_design_1_1_widgets_1_1_parent_widget_handler.html',1,'ARDesign::Widgets']]],
-  ['parentwidgethandler_2ecs',['ParentWidgetHandler.cs',['../_parent_widget_handler_8cs.html',1,'']]],
-  ['parsesetuptext',['ParseSetUpText',['../class_a_r_design_1_1_widgets_1_1_data_widget.html#afdc7d727d064166a4b7018a691a2a569',1,'ARDesign.Widgets.DataWidget.ParseSetUpText()'],['../class_a_r_design_1_1_widgets_1_1_influx_reader.html#a68d0ec9a1250706468ef5a626cfa128e',1,'ARDesign.Widgets.InfluxReader.ParseSetUpText()'],['../class_a_r_design_1_1_widgets_1_1_parent_widget.html#ab7bee1eb11b57311089304da82190e51',1,'ARDesign.Widgets.ParentWidget.ParseSetUpText()']]],
-  ['parseupdatetext',['ParseUpdateText',['../class_a_r_design_1_1_widgets_1_1_data_widget.html#a201b90c9e9a84c1e2c39899e3ad822d2',1,'ARDesign.Widgets.DataWidget.ParseUpdateText()'],['../class_a_r_design_1_1_widgets_1_1_influx_reader.html#acedd71e0b4c9fac2ad0e5007b3467fdb',1,'ARDesign.Widgets.InfluxReader.ParseUpdateText()'],['../class_a_r_design_1_1_widgets_1_1_parent_widget.html#af1511f2fa3e002e89612ce4dbc338f16',1,'ARDesign.Widgets.ParentWidget.ParseUpdateText()']]]
+  ['oninputclicked',['OnInputClicked',['../class_widget_activate_input_handler.html#a5da082efb21a9411f36ef57fbd1531a0',1,'WidgetActivateInputHandler.OnInputClicked()'],['../class_widget_drag_input_handler.html#a4df2f0baad17be4665afbfe8c7da3d2d',1,'WidgetDragInputHandler.OnInputClicked()']]],
+  ['onvumarkdetected',['OnVuMarkDetected',['../class_vu_mark_handler.html#a9a86655a5aefb8f8ced80bfe0458d389',1,'VuMarkHandler']]],
+  ['onvumarklost',['OnVuMarkLost',['../class_vu_mark_handler.html#a16efa5c91ed9f2af038dfb5404e5893a',1,'VuMarkHandler']]],
+  ['origin',['Origin',['../class_origin.html',1,'']]],
+  ['origin_2ecs',['Origin.cs',['../_origin_8cs.html',1,'']]]
 ];

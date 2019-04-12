@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['testcameramovement',['TestCameraMovement',['../class_test_camera_movement.html',1,'']]],
-  ['testwidgetenable',['TestWidgetEnable',['../class_test_widget_enable.html',1,'']]]
+  ['receiver',['Receiver',['../class_a_r_design_1_1_serialize_1_1_receiver.html',1,'ARDesign::Serialize']]]
 ];

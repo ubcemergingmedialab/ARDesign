@@ -1,0 +1,9 @@
+<map id="ARDesign.Widgets.InfluxReader.ParseSetUpText" name="ARDesign.Widgets.InfluxReader.ParseSetUpText">
+<area shape="rect" id="node1" title="Call back function for building the widget" alt="" coords="1484,5,1695,47"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a9f4299c6a3b11905e024c936443d1a9a" title="Builds all values from the setup query" alt="" coords="1225,5,1436,47"/>
+<area shape="rect" id="node3" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#aea7372a7c87c1fcbe8090c48e876a2d8" title="Set the values in the widget, by querying the database. Heavy overhead, depending on data type" alt="" coords="967,5,1177,47"/>
+<area shape="rect" id="node4" href="$class_a_r_design_1_1_j_s_o_n_builder.html#a10220bbbcd3255bab8dcc52c774d769f" title="Loads data on all widgets" alt="" coords="736,5,919,47"/>
+<area shape="rect" id="node5" href="$class_a_r_design_1_1_j_s_o_n_builder.html#abb9c4f44a81554509f2bb6a6a40b32b9" title="Deserializes a scene configuration and builds it on the origin location" alt="" coords="479,5,688,47"/>
+<area shape="rect" id="node6" href="$class_a_r_design_1_1_j_s_o_n_builder.html#aa7db4d5f5e9321a47007ce50ff8cef24" title="Builds a scene with a static json and editor specified object" alt="" coords="244,13,431,39"/>
+<area shape="rect" id="node7" href="$class_a_r_design_1_1_j_s_o_n_builder.html#a671f64255f3d2f0e1823bcca7601911a" title=" " alt="" coords="5,13,196,39"/>
+</map>

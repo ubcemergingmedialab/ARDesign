@@ -97,52 +97,83 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <tr><td><img src="inherit_graph_0.png" border="0" alt="" usemap="#_a_r_design_8_influx_8_influx_setup"/>
 <map name="_a_r_design_8_influx_8_influx_setup" id="_a_r_design_8_influx_8_influx_setup">
 <area shape="rect"  title=" " alt="" coords="5,31,132,57"/>
-<area shape="rect"  href="class_widget_activate_input_handler.html" title=" " alt="" coords="200,56,381,83"/>
-<area shape="rect"  href="class_widget_drag_input_handler.html" title=" " alt="" coords="209,5,372,32"/>
-<area shape="rect"  title=" " alt="" coords="13,259,124,285"/>
+<area shape="rect"  href="class_widget_activate_input_handler.html" title=" " alt="" coords="200,5,381,32"/>
+<area shape="rect"  href="class_widget_drag_input_handler.html" title=" " alt="" coords="209,56,372,83"/>
+<area shape="rect"  title=" " alt="" coords="13,284,124,311"/>
 <area shape="rect"  href="class_a_r_design_1_1_influx_1_1_influx_setup.html" title="Object for storing scene configuration settings &#45; should be parent to widgets" alt="" coords="199,411,382,437"/>
 <area shape="rect"  href="class_a_r_design_1_1_j_s_o_n_builder.html" title="Singleton object for handling scene loading and widget creation" alt="" coords="211,461,370,488"/>
-<area shape="rect"  href="class_a_r_design_1_1_widgets_1_1_influx_reader.html" title="Abstract class for querying Influx data to widgets. Includes implemented methods for building useful ..." alt="" coords="187,512,394,539"/>
+<area shape="rect"  href="class_a_r_design_1_1_serialize_1_1_variable_manager.html" title="Persistent singleton object that stores scene configuration info. ARDesign&#45;setup can be seen as essen..." alt="" coords="198,513,383,554"/>
+<area shape="rect"  href="class_a_r_design_1_1_widgets_1_1_influx_reader.html" title="Abstract class for querying Influx data to widgets. Includes implemented methods for building useful ..." alt="" coords="187,579,394,605"/>
 <area shape="rect"  href="class_a_r_design_1_1_widgets_1_1_widget_handler.html" title="Refers to general data&#45;agnostic widget functionality" alt="" coords="180,107,401,133"/>
 <area shape="rect"  href="class_connector_behaviour.html" title="Draws a line from the widget to the rootnode, updating as widget position changes" alt="" coords="222,157,359,184"/>
 <area shape="rect"  href="class_origin.html" title=" " alt="" coords="263,208,319,235"/>
 <area shape="rect"  href="class_test_camera_movement.html" title=" " alt="" coords="215,259,366,285"/>
 <area shape="rect"  href="class_test_widget_enable.html" title=" " alt="" coords="227,309,355,336"/>
 <area shape="rect"  href="class_vu_mark_handler.html" title="A custom handler which uses the vuMarkManager." alt="" coords="235,360,346,387"/>
-<area shape="rect"  href="class_a_r_design_1_1_widgets_1_1_influx_type.html" title="This ensures type agnostic functions can be run on InfluxReaders &#45; All widgets should inherit from TH..." alt="" coords="455,512,680,539"/>
+<area shape="rect"  href="class_a_r_design_1_1_widgets_1_1_influx_type.html" title="This ensures type agnostic functions can be run on InfluxReaders &#45; All widgets should inherit from TH..." alt="" coords="455,579,680,605"/>
 <area shape="rect"  href="class_a_r_design_1_1_widgets_1_1_widget_type.html" title="Typed widget handler class. Type indicates form of Widget content and should derive from InfluxReader" alt="" coords="449,107,685,133"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_1.png" border="0" alt="" usemap="#_a_r_design_8_influx_8_values"/>
+<tr><td><img src="inherit_graph_1.png" border="0" alt="" usemap="#_a_r_design_8_influx_8_utility"/>
+<map name="_a_r_design_8_influx_8_utility" id="_a_r_design_8_influx_8_utility">
+<area shape="rect"  href="class_a_r_design_1_1_influx_1_1_utility.html" title="Static helper functions for Influx querying and serialization" alt="" coords="5,5,156,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_2.png" border="0" alt="" usemap="#_a_r_design_8_influx_8_values"/>
 <map name="_a_r_design_8_influx_8_values" id="_a_r_design_8_influx_8_values">
 <area shape="rect"  href="struct_a_r_design_1_1_influx_1_1_values.html" title=" " alt="" coords="5,5,164,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_2.png" border="0" alt="" usemap="#_a_r_design_8_widgets_8_data_widget"/>
+<tr><td><img src="inherit_graph_3.png" border="0" alt="" usemap="#_a_r_design_8_serialize_8_d_b_scene"/>
+<map name="_a_r_design_8_serialize_8_d_b_scene" id="_a_r_design_8_serialize_8_d_b_scene">
+<area shape="rect"  href="struct_a_r_design_1_1_serialize_1_1_d_b_scene.html" title="Struct for storing configuration of a room &#45; designed for deserializing from JSON" alt="" coords="5,5,199,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_4.png" border="0" alt="" usemap="#_a_r_design_8_serialize_8_d_b_widget"/>
+<map name="_a_r_design_8_serialize_8_d_b_widget" id="_a_r_design_8_serialize_8_d_b_widget">
+<area shape="rect"  href="struct_a_r_design_1_1_serialize_1_1_d_b_widget.html" title="Struct for storing widget info &#45; Designed for JSON deserialization" alt="" coords="5,5,203,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_5.png" border="0" alt="" usemap="#_a_r_design_8_serialize_8_publisher"/>
+<map name="_a_r_design_8_serialize_8_publisher" id="_a_r_design_8_serialize_8_publisher">
+<area shape="rect"  href="class_a_r_design_1_1_serialize_1_1_publisher.html" title="Helper functions for sending scene configurations" alt="" coords="5,5,197,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_6.png" border="0" alt="" usemap="#_a_r_design_8_serialize_8_receiver"/>
+<map name="_a_r_design_8_serialize_8_receiver" id="_a_r_design_8_serialize_8_receiver">
+<area shape="rect"  href="class_a_r_design_1_1_serialize_1_1_receiver.html" title="Helper functions for loading a scene configuration" alt="" coords="5,5,192,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_7.png" border="0" alt="" usemap="#_a_r_design_8_serialize_8_utility"/>
+<map name="_a_r_design_8_serialize_8_utility" id="_a_r_design_8_serialize_8_utility">
+<area shape="rect"  href="class_a_r_design_1_1_serialize_1_1_utility.html" title="Helper utilities for configuration serialization" alt="" coords="5,5,176,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_8.png" border="0" alt="" usemap="#_a_r_design_8_widgets_8_data_widget"/>
 <map name="_a_r_design_8_widgets_8_data_widget" id="_a_r_design_8_widgets_8_data_widget">
 <area shape="rect"  title=" " alt="" coords="5,5,168,47"/>
 <area shape="rect"  href="class_a_r_design_1_1_widgets_1_1_data_widget.html" title="Widget storing data for a specific type dataVal is of type IDictionary&lt;DateTime, Vector2&gt;" alt="" coords="216,13,420,39"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_3.png" border="0" alt="" usemap="#_a_r_design_8_widgets_8_influx_type_3_01string[]_4"/>
+<tr><td><img src="inherit_graph_9.png" border="0" alt="" usemap="#_a_r_design_8_widgets_8_influx_type_3_01string[]_4"/>
 <map name="_a_r_design_8_widgets_8_influx_type_3_01string[]_4" id="_a_r_design_8_widgets_8_influx_type_3_01string[]_4">
 <area shape="rect"  href="class_a_r_design_1_1_widgets_1_1_influx_type.html" title=" " alt="" coords="5,5,200,47"/>
 <area shape="rect"  href="class_a_r_design_1_1_widgets_1_1_parent_widget.html" title="Reader class for parent widgets Parent widgets query a measurement for a list of types (ie...." alt="" coords="248,13,463,39"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_4.png" border="0" alt="" usemap="#_a_r_design_8_widgets_8_widget_type_3_01_data_widget_01_4"/>
+<tr><td><img src="inherit_graph_10.png" border="0" alt="" usemap="#_a_r_design_8_widgets_8_widget_type_3_01_data_widget_01_4"/>
 <map name="_a_r_design_8_widgets_8_widget_type_3_01_data_widget_01_4" id="_a_r_design_8_widgets_8_widget_type_3_01_data_widget_01_4">
 <area shape="rect"  href="class_a_r_design_1_1_widgets_1_1_widget_type.html" title=" " alt="" coords="5,5,211,47"/>
 <area shape="rect"  href="class_a_r_design_1_1_widgets_1_1_data_widget_handler.html" title="Handler class for data displaying widgets" alt="" coords="259,5,463,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_5.png" border="0" alt="" usemap="#_a_r_design_8_widgets_8_widget_type_3_01_parent_widget_01_4"/>
+<tr><td><img src="inherit_graph_11.png" border="0" alt="" usemap="#_a_r_design_8_widgets_8_widget_type_3_01_parent_widget_01_4"/>
 <map name="_a_r_design_8_widgets_8_widget_type_3_01_parent_widget_01_4" id="_a_r_design_8_widgets_8_widget_type_3_01_parent_widget_01_4">
 <area shape="rect"  href="class_a_r_design_1_1_widgets_1_1_widget_type.html" title=" " alt="" coords="5,5,211,47"/>
 <area shape="rect"  href="class_a_r_design_1_1_widgets_1_1_parent_widget_handler.html" title="Handler class for parent widgets &#45; includes building child widget objects" alt="" coords="259,5,473,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_6.png" border="0" alt="" usemap="#_widget_receiver"/>
+<tr><td><img src="inherit_graph_12.png" border="0" alt="" usemap="#_widget_receiver"/>
 <map name="_widget_receiver" id="_widget_receiver">
 <area shape="rect"  title=" " alt="" coords="5,5,136,32"/>
 <area shape="rect"  href="class_widget_receiver.html" title=" " alt="" coords="184,5,296,32"/>

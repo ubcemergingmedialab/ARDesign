@@ -1,0 +1,4 @@
+<map id="ARDesign.Widgets.InfluxReader.SetDBVals" name="ARDesign.Widgets.InfluxReader.SetDBVals">
+<area shape="rect" id="node1" title="Sets the base database values &#45; should be called before anything else!" alt="" coords="253,5,464,47"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_j_s_o_n_builder.html#a4ca163b759349b40c5d22393ae0a9da8" title="Creates the widget objects specified in wid as children of the sceneObj This shouldn&#39;t do any computa..." alt="" coords="5,5,205,47"/>
+</map>

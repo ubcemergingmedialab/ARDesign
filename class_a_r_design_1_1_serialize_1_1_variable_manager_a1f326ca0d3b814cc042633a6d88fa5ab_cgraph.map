@@ -1,0 +1,5 @@
+<map id="ARDesign.Serialize.VariableManager.Test" name="ARDesign.Serialize.VariableManager.Test">
+<area shape="rect" id="node1" title="If test is true, print finished JSON to a file" alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_serialize_1_1_utility.html#aeca5df16a6d55eb6ab35f1cfd4e6b101" title="For testing &#45; serializes a configuration and writes it to a file" alt="" coords="239,5,413,47"/>
+<area shape="rect" id="node3" href="$class_a_r_design_1_1_serialize_1_1_utility.html#a8292ac201d98c92cd6bdcedf699e4820" title="Serialize a given scene configuration into human readable JSON" alt="" coords="461,5,636,47"/>
+</map>

@@ -1,7 +1,9 @@
 var searchData=
 [
   ['buildchildren',['BuildChildren',['../class_a_r_design_1_1_widgets_1_1_parent_widget_handler.html#a664ff9911d8fd51b1459f3cbc0d2985a',1,'ARDesign::Widgets::ParentWidgetHandler']]],
-  ['building',['building',['../class_a_r_design_1_1_widgets_1_1_influx_reader.html#a25664c1756116300c18679be36225db6',1,'ARDesign::Widgets::InfluxReader']]],
+  ['building',['Building',['../struct_a_r_design_1_1_serialize_1_1_d_b_widget.html#a3684132a49c6fc7267acc6891fb36330',1,'ARDesign.Serialize.DBWidget.Building()'],['../class_a_r_design_1_1_widgets_1_1_influx_reader.html#a25664c1756116300c18679be36225db6',1,'ARDesign.Widgets.InfluxReader.building()']]],
+  ['buildscenetofile',['BuildSceneToFile',['../class_a_r_design_1_1_serialize_1_1_utility.html#aeca5df16a6d55eb6ab35f1cfd4e6b101',1,'ARDesign::Serialize::Utility']]],
+  ['buildscenetostring',['BuildSceneToString',['../class_a_r_design_1_1_serialize_1_1_utility.html#a8292ac201d98c92cd6bdcedf699e4820',1,'ARDesign::Serialize::Utility']]],
   ['buildurl',['BuildUrl',['../class_a_r_design_1_1_widgets_1_1_influx_reader.html#a784807f0dec5015e392c5a70a2374b6a',1,'ARDesign::Widgets::InfluxReader']]],
   ['buildurltaglist',['BuildUrlTagList',['../class_a_r_design_1_1_widgets_1_1_influx_reader.html#a6fee713ec615620cdb1a39d8fdca7617',1,'ARDesign::Widgets::InfluxReader']]],
   ['buildurlwithlimit',['BuildUrlWithLimit',['../class_a_r_design_1_1_widgets_1_1_influx_reader.html#a6fa31fc6d73940608eecc3c2c8eb3d35',1,'ARDesign::Widgets::InfluxReader']]],

@@ -1,6 +1,7 @@
 var dir_f13b41af88cf68434578284aaf699e39 =
 [
     [ "InfluxDB", "dir_6a51948d2cbf56435e5948d65eff179d.html", "dir_6a51948d2cbf56435e5948d65eff179d" ],
+    [ "Serialization", "dir_7225cfdb18693f3272401fc8d36ebca7.html", "dir_7225cfdb18693f3272401fc8d36ebca7" ],
     [ "WidgetManagement", "dir_6084d092675e6cfafed8003a454b4ad3.html", "dir_6084d092675e6cfafed8003a454b4ad3" ],
     [ "ConnectorBehaviour.cs", "_connector_behaviour_8cs.html", [
       [ "ConnectorBehaviour", "class_connector_behaviour.html", null ]

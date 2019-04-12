@@ -1,0 +1,4 @@
+<map id="ARDesign.JSONBuilder.GetText" name="ARDesign.JSONBuilder.GetText">
+<area shape="rect" id="node1" title="Starts get request to fetch config for a given ID" alt="" coords="5,13,213,39"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_serialize_1_1_receiver.html#af300a3172b32c6fa15a2d9ebd014f1bd" title="Gats a preconfigured web request for loading a given id&#39;s config" alt="" coords="261,5,452,47"/>
+</map>

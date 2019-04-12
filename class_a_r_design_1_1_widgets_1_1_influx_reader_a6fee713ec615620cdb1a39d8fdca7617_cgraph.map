@@ -2,4 +2,5 @@
 <area shape="rect" id="node1" title="Builds a https Influx query to return all tags for a given key Use for building list of types in a me..." alt="" coords="5,5,216,47"/>
 <area shape="rect" id="node2" href="$class_a_r_design_1_1_widgets_1_1_influx_reader.html#a784807f0dec5015e392c5a70a2374b6a" title="Builds a https Influx query for the given string" alt="" coords="264,5,475,47"/>
 <area shape="rect" id="node3" href="$class_a_r_design_1_1_influx_1_1_influx_setup.html#a34bd4d0ec1d933435cf15a2ea3e7186c" title="Encodes a given plain text query into a InfluxDB https query" alt="" coords="523,5,709,47"/>
+<area shape="rect" id="node4" href="$class_a_r_design_1_1_influx_1_1_utility.html#a8b11737cfe6161a52d6096dd24c6fff0" title="Builds https query for use with InfluxDB https query language" alt="" coords="757,5,912,47"/>
 </map>

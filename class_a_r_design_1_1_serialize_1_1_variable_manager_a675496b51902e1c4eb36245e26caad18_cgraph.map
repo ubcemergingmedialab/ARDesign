@@ -1,0 +1,4 @@
+<map id="ARDesign.Serialize.VariableManager.ToString" name="ARDesign.Serialize.VariableManager.ToString">
+<area shape="rect" id="node1" title="Serialize configuration into a JSON string" alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_serialize_1_1_utility.html#a8292ac201d98c92cd6bdcedf699e4820" title="Serialize a given scene configuration into human readable JSON" alt="" coords="239,5,413,47"/>
+</map>

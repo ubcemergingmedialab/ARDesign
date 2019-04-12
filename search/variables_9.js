@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['widget',['widget',['../class_a_r_design_1_1_widgets_1_1_influx_reader.html#a3fc8f5035df684c4fcec54e5e694fc5e',1,'ARDesign::Widgets::InfluxReader']]],
-  ['widgetobj',['WidgetObj',['../class_a_r_design_1_1_widgets_1_1_widget_handler.html#a7cf7d4d756a96fefc1892fe98d8cb64f',1,'ARDesign::Widgets::WidgetHandler']]]
+  ['t',['t',['../struct_a_r_design_1_1_influx_1_1_values.html#a4e2bc4ee7bc92e3d38eca8bf94af476d',1,'ARDesign::Influx::Values']]],
+  ['time',['time',['../struct_a_r_design_1_1_influx_1_1_values.html#ad94bf6b26cfb6a1fea7e379a1fadd685',1,'ARDesign::Influx::Values']]],
+  ['toupdate',['toUpdate',['../class_a_r_design_1_1_widgets_1_1_influx_reader.html#a787854251be6757af4744184964a2f2e',1,'ARDesign::Widgets::InfluxReader']]],
+  ['type',['type',['../struct_a_r_design_1_1_influx_1_1_values.html#a16d0af215302d95a68f7257a735c128d',1,'ARDesign::Influx::Values']]]
 ];

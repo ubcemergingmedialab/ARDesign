@@ -5,5 +5,6 @@ var searchData=
   ['connector',['Connector',['../class_a_r_design_1_1_widgets_1_1_widget_handler.html#a67d441d47ec12b89d95e02219e6a8ea0',1,'ARDesign::Widgets::WidgetHandler']]],
   ['connectorbehaviour',['ConnectorBehaviour',['../class_connector_behaviour.html',1,'']]],
   ['connectorbehaviour_2ecs',['ConnectorBehaviour.cs',['../_connector_behaviour_8cs.html',1,'']]],
+  ['createfromjson',['CreateFromJSON',['../class_a_r_design_1_1_serialize_1_1_utility.html#a2dec12f4696e8b99ccb9245473fed90f',1,'ARDesign::Serialize::Utility']]],
   ['currentchild',['currentChild',['../class_a_r_design_1_1_widgets_1_1_parent_widget_handler.html#ae57a166f787ccf084a437e079d291036',1,'ARDesign::Widgets::ParentWidgetHandler']]]
 ];

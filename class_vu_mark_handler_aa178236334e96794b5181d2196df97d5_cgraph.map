@@ -1,0 +1,9 @@
+<map id="VuMarkHandler.Start" name="VuMarkHandler.Start">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,148,57"/>
+<area shape="rect" id="node2" href="$class_vu_mark_handler.html#a9a86655a5aefb8f8ced80bfe0458d389" title="This method will be called whenever a new VuMark is detected" alt="" coords="196,56,425,83"/>
+<area shape="rect" id="node7" href="$class_vu_mark_handler.html#a16efa5c91ed9f2af038dfb5404e5893a" title="This method will be called whenever a tracked VuMark is lost" alt="" coords="209,5,412,32"/>
+<area shape="rect" id="node3" href="$class_vu_mark_handler.html#a9df03dbc92e8933563fe507d8214151c" title=" " alt="" coords="473,5,667,32"/>
+<area shape="rect" id="node4" href="$class_origin.html#a0d3c1f863a67c783024ffeb9aaa36543" title="This method associates the parent VuMarkId to Origin" alt="" coords="531,56,609,83"/>
+<area shape="rect" id="node5" href="$class_a_r_design_1_1_j_s_o_n_builder.html#a88e2d99e0566eacd27266983f5fe044d" title="Starts get request to fetch config for a given ID" alt="" coords="715,56,923,83"/>
+<area shape="rect" id="node6" href="$class_a_r_design_1_1_serialize_1_1_receiver.html#af300a3172b32c6fa15a2d9ebd014f1bd" title="Gats a preconfigured web request for loading a given id&#39;s config" alt="" coords="971,49,1161,90"/>
+</map>

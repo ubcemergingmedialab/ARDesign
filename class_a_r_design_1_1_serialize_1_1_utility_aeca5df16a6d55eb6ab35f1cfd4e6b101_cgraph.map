@@ -1,0 +1,4 @@
+<map id="ARDesign.Serialize.Utility.BuildSceneToFile" name="ARDesign.Serialize.Utility.BuildSceneToFile">
+<area shape="rect" id="node1" title="For testing &#45; serializes a configuration and writes it to a file" alt="" coords="5,5,180,47"/>
+<area shape="rect" id="node2" href="$class_a_r_design_1_1_serialize_1_1_utility.html#a8292ac201d98c92cd6bdcedf699e4820" title="Serialize a given scene configuration into human readable JSON" alt="" coords="228,5,403,47"/>
+</map>
