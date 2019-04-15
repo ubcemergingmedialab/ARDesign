@@ -683,7 +683,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6668e3163797444182f199ba6c82676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toUpdate: 0
 --- !u!114 &114310331258738594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -697,7 +696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WidgetObj: {fileID: 1232341463352712}
   Connector: {fileID: 1257510397402208}
-  GenericDataWidgetObj: {fileID: 1169578940590160, guid: 1495d863426d74a4e9ff053fc9c06c49,
+  GenericDataWidgetObj: {fileID: 1154442411772248, guid: a22aca7b0122ccd4489d2e237b594238,
     type: 2}
   currentChild:
   - {fileID: 1690315389104632}

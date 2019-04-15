@@ -2,19 +2,24 @@
 	"Host":"206.12.88.106",
 	"Port":"8086",
 	"Db":"awair",
+	"Building":"CIRS",
+	"Room":"3157",
 	"Widgets":[
 		{"Position":{"x":2,"y":0,"z":2},
 		 "Measure":"IEQ_sensor_data",
-		 "Building":"CIRS",
-		 "Room":"3157"},
-		{"Position":{"x":-2,"y":0,"z":2},
+		 "Values":[
+			"CO2",
+			"VOCs"]},
+		{"Position":{"x":-1,"y":0,"z":2},
 		 "Measure":"IEQ_sensor_data",
-		 "Building":"CIRS",
-		 "Room":"3157"},
-		 {"Position":{"x":0,"y":0,"z":2},
+		 "Values":[
+			"PM2.5",
+			"PM10"]},
+		{"Position":{"x":0,"y":0,"z":2},
 		 "Measure":"IEQ_sensor_data",
-		 "Building":"CIRS",
-		 "Room":"3157"}
+		 "Values":[
+			"temperature",
+			"rel_humidity"
 	]
 
 }

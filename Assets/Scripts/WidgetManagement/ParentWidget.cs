@@ -33,12 +33,12 @@ namespace ARDesign
             {
                 get
                 {
-                    return dbwid.values;
+                    return dbwid.Values;
                 }
 
                 set
                 {
-                    dbwid.values = value;
+                    dbwid.Values = value;
                 }
             }
             #endregion //PRIVATE MEMBER VARIABLES
@@ -103,7 +103,7 @@ namespace ARDesign
             /// </summary>
             public override void SetVals()
             {
-                DataVals = dbwid.values;
+                DataVals = dbwid.Values;
                 wid.BuildChildren(DataVals);
 
                 //Code for building children should go here
