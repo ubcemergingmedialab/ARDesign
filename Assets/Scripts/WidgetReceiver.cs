@@ -15,7 +15,7 @@ public class WidgetReceiver : InteractionReceiver
 
     #region PRIVATE_MEMBER_VARIABLES
     private DataWidgetHandler handler;
-    private DataWidget wid;
+    //private DataWidget wid;
     private HandDraggable handDraggable;
     private bool isDraggable = false;
     #endregion //PRIVATE_MEMBER_VARIABLES
@@ -23,7 +23,7 @@ public class WidgetReceiver : InteractionReceiver
     #region UNITY_MONOBEHAVIOUR_METHODS
     private void Start()
     {
-        wid = widgetobj.GetComponent <DataWidget>();
+        //wid = widgetobj.GetComponent <DataWidget>();
         handler = widgetparent.GetComponent<DataWidgetHandler>();
 
         handDraggable = widgetobj.GetComponent<HandDraggable>();

@@ -1,4 +1,5 @@
 ﻿using ARDesign.Influx;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace ARDesign
         /// Parent widgets query a measurement for a list of types (ie. CO2, temp, etc), and then build a child data widget for each
         /// dataVals Data type is therefore string[]
         /// </summary>
-        public class ParentWidget : InfluxType<string[]>
+        public class ParentWidget : WidgetReader
         {
             #region PRIVATE_MEMBER_VARIABLES
 
@@ -25,9 +26,33 @@ namespace ARDesign
             /// List of all children - built dynamically
             /// </summary>
             private IList<DataWidget> children;
+
+            private Serialize.DBWidget dbwid;
+
+            private string[] DataVals
+            {
+                get
+                {
+                    return dbwid.Values;
+                }
+
+                set
+                {
+                    dbwid.Values = value;
+                }
+            }
             #endregion //PRIVATE MEMBER VARIABLES
 
             #region PUBLIC_METHODS
+            /// <summary>
+            /// Sets the base database values - should be called before anything else!
+            /// </summary>
+            /// <param name="wid">Deserialized struct to build parent from</param>
+            public new void SetDBVals(Serialize.DBWidget wid)
+            {
+                base.SetDBVals(wid);
+                dbwid = wid;
+            }
 
             /// <summary>
             /// Adds a child widget to the parent
@@ -43,28 +68,26 @@ namespace ARDesign
                 children.Add(dw);
                 SetupChildWidget(dw);
             }
-            #endregion //PUBLIC_METHODS
-
-            #region PRIVATE_METHODS
-            protected override void CastWidget()
-            {
-                wid = (ParentWidgetHandler)widget;
-            }
-
 
             /// <summary>
-            /// Pareses the setup query and builds the widget and all its children
+            /// Returns the list of values
             /// </summary>
-            /// <param name="webReturn">JSON string returned from query</param>
-            protected override void ParseSetUpText(string webReturn)
+            /// <returns>dataVals for this widget, of type specified in InfluxType</returns>
+            public string[] GetData()
             {
-                dataVals = Utility.ParseLabels(webReturn);
-                //Debug.Log(webReturn);
-                wid.BuildChildren(dataVals);
-
-                //Code for building children should go here
-                JSONBuilder.instance.AddWidget(children);
+                return DataVals;
             }
+            #endregion //PUBLIC_METHODS
+
+            #region UNITY_MONOBEHAVIOUR_METHODS
+            // Use this for initialization
+            void Awake()
+            {
+                widget = this.GetComponent<ParentWidgetHandler>();
+            }
+            #endregion //UNITY_MONOBEHAVIOUR_METHODS
+
+            #region PRIVATE_METHODS
 
             /// <summary>
             /// Sets given child data widget to use the same Influx server info as its parent
@@ -72,31 +95,19 @@ namespace ARDesign
             /// <param name="child">DataWidget child</param>
             private void SetupChildWidget(DataWidget child)
             {
-                child.SetDBVals(measure, building, room);
+                child.SetDBVals(measure,parent);
             }
 
             /// <summary>
-            /// Parent widgets should never be updated - toUpdate is always false
+            /// Statically sets widget values from deserialized parent
             /// </summary>
-            /// <param name="webResult"></param>
-            protected override void ParseUpdateText(string webResult)
+            public override void SetVals()
             {
-                throw new System.NotImplementedException();
-            }
+                DataVals = dbwid.Values;
+                wid.BuildChildren(DataVals);
 
-            /// <summary>
-            /// Queries a list of types in the measure
-            /// </summary>
-            /// <returns>Http query url</returns>
-            protected override string SetQueryUrl()
-            {
-                //Debug.Log(BuildUrlTagList("type"));
-                return BuildUrlTagList("type");
-            }
-
-            protected override string SetUpdateUrl()
-            {
-                return BuildUrlTagList("type");
+                //Code for building children should go here
+                JSONBuilder.instance.AddWidget(children);
             }
             #endregion //PRIVATE METHODS
         }

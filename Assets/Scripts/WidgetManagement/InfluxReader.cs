@@ -12,7 +12,7 @@ namespace ARDesign
     {
         /// <summary>
         /// This ensures type agnostic functions can be run on InfluxReaders - 
-        /// All widgets should inherit from THIS, NOT InfluxReader!
+        /// All querying widgets should inherit from THIS, NOT InfluxReader!
         /// </summary>
         /// <typeparam name="T">Data type</typeparam>
         public abstract class InfluxType<T> : InfluxReader
@@ -47,41 +47,29 @@ namespace ARDesign
         /// Abstract class for querying Influx data to widgets.
         /// Includes implemented methods for building useful queries - see Query Helper Functions
         /// </summary>
-        public abstract class InfluxReader : MonoBehaviour
+        public abstract class InfluxReader : WidgetReader
         {
-            //determines if widget needs to be updated or is static
+            /// <summary>
+            /// determines if widget needs to be updated or is static
+            /// </summary>
             public bool toUpdate = false;
-            [NonSerialized]
-            public bool isDataBuilt = false;
-            [NonSerialized]
-            public bool isSetup = false;
 
             #region PRIVATE_MEMBER_VARIABLES
-            protected string measure;
-            protected string building;
-            protected string room;
-            private InfluxSetup parent = null;
-
             private string urlToQuery;
             private string urlToUpdate;
 
-            protected WidgetHandler widget;
             #endregion //PRIVATE_MEMBER_VARIABLES
 
             #region PUBLIC_METHODS
             /// <summary>
             /// Sets the base database values - should be called before anything else!
+            /// For use in child widgets, where the parent is likely another widget
             /// </summary>
             /// <param name="m">Measure name</param>
-            /// <param name="b">Building</param>
-            /// <param name="r">Room</param>
-            public void SetDBVals(string m, string b, string r)
+            /// <param name="parent">Database configuration container</param>
+            public new void SetDBVals(string m, InfluxSetup parent)
             {
-                parent = gameObject.GetComponentInParent<InfluxSetup>();
-                measure = m;
-                building = b;
-                room = r;
-
+                base.SetDBVals(m, parent);
                 urlToQuery = SetQueryUrl();
                 urlToUpdate = SetQueryUrl();
             }
@@ -98,7 +86,7 @@ namespace ARDesign
             /// Set the values in the widget, by querying the database.
             /// Heavy overhead, depending on data type
             /// </summary>
-            public void SetVals()
+            public override void SetVals()
             {
                 StartCoroutine(BuildValues());
                 isSetup = true;
@@ -127,7 +115,7 @@ namespace ARDesign
             protected abstract void ParseSetUpText(string webReturn);
 
             /// <summary>
-            /// Call back function for updating the widget
+            /// Call back function for updating the widget - only used if toUpdate is true
             /// </summary>
             /// <param name="webReturn">Result from update query</param>
             protected abstract void ParseUpdateText(string webReturn);
@@ -193,7 +181,7 @@ namespace ARDesign
             /// <returns>URL for the query</returns>
             public string BuildUrlWithLimit(int limit)
             {
-                return BuildUrl("SELECT type,value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' ORDER BY DESC LIMIT " + limit);
+                return BuildUrl("SELECT type,value FROM " + measure + " WHERE \"building\"=\'" + parent.Building + "\' AND \"room\"=\'" + parent.Room + "\' ORDER BY DESC LIMIT " + limit);
 
             }
 
@@ -205,7 +193,7 @@ namespace ARDesign
             public string BuildUrlWithoutLimit()
             {
 
-                return BuildUrl("SELECT type,value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' ORDER BY DESC");
+                return BuildUrl("SELECT type,value FROM " + measure + " WHERE \"building\"=\'" + parent.Building + "\' AND \"room\"=\'" + parent.Room + "\' ORDER BY DESC");
 
             }
 
@@ -217,7 +205,7 @@ namespace ARDesign
             /// <returns>URL for the query</returns>
             public string BuildUrlWithLimitSetType(string type, int limit)
             {
-                return BuildUrl("SELECT value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' AND \"type\"=\'" + type + "\' ORDER BY DESC LIMIT " + limit);
+                return BuildUrl("SELECT value FROM " + measure + " WHERE \"building\"=\'" + parent.Building + "\' AND \"room\"=\'" + parent.Room + "\' AND \"type\"=\'" + type + "\' ORDER BY DESC LIMIT " + limit);
 
             }
 
@@ -229,7 +217,7 @@ namespace ARDesign
             public string BuildUrlWithoutLimitSetType(string type)
             {
 
-                return BuildUrl("SELECT value FROM " + measure + " WHERE \"building\"=\'" + building + "\' AND \"room\"=\'" + room + "\' AND \"type\"=\'" + type + "\' ORDER BY DESC");
+                return BuildUrl("SELECT value FROM " + measure + " WHERE \"building\"=\'" + parent.Building + "\' AND \"room\"=\'" + parent.Room + "\' AND \"type\"=\'" + type + "\' ORDER BY DESC");
 
             }
 

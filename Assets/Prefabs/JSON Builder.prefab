@@ -52,9 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   widgetPrefab: {fileID: 0}
-  requestUrl: https://ardesign-config.herokuapp.com/api/scenes/
   success: {fileID: 0}
-  webError: {fileID: 0}
+  webError: {fileID: 1273233528220666, guid: bedf2ca05a55af84bb5a71ea09f89bca, type: 2}
   serverCommunication: {fileID: 0}
   test: 1
   testSceneObj: {fileID: 0}

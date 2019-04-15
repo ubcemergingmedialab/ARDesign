@@ -10,19 +10,14 @@ namespace ARDesign
         /// Typed widget handler class. Type indicates form of Widget content and should derive from InfluxReader
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public abstract class WidgetType<T> : WidgetHandler where T : InfluxReader
+        public abstract class WidgetType<T> : WidgetHandler where T : WidgetReader
         {
-
-            /// <summary>
-            /// Reader indicates the data loading functions of the widget. Should derive from InfluxReader
-            /// </summary>
-            protected T reader;
+            protected new T reader;
 
             #region UNITY_MONOBEHAVIOUR_METHODS
             void Awake()
             {
                 reader = this.GetComponent<T>();
-                influxWidget = reader;
             }
             #endregion //UNITY_MONOBEHAVIOUR_METHODS
         }
@@ -40,7 +35,7 @@ namespace ARDesign
             [SerializeField]
             protected GameObject Connector;
 
-            protected InfluxReader influxWidget;
+            protected WidgetReader reader;
             #endregion //PRIVATE_MEMBER_VARIABLES
 
             #region PUBLIC_METHODS
