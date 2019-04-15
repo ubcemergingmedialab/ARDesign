@@ -18,7 +18,7 @@ namespace ARDesign
         public static JSONBuilder instance = null;
 
         /// <summary>
-        /// Prefab to be used for building widgets
+        /// Prefab to be used for building parent widgets
         /// </summary>
         [SerializeField]
         private GameObject widgetPrefab;
@@ -50,8 +50,8 @@ namespace ARDesign
 
         #region PRIVATE_MEMBER_VARIABLES
         // List of all present widgets 
-        private List<InfluxReader> widgets;
-        private List<InfluxReader> tempWidgets;
+        private List<WidgetReader> widgets;
+        private List<WidgetReader> tempWidgets;
 
         private bool isRunning = false;
         #endregion //PRIVATE_MEMBER_VARIABLES
@@ -68,8 +68,8 @@ namespace ARDesign
             {
                 Destroy(this.gameObject);
             }
-            tempWidgets = new List<InfluxReader>();
-            widgets = new List<InfluxReader>();
+            tempWidgets = new List<WidgetReader>();
+            widgets = new List<WidgetReader>();
 
 
             if (test) Test();
@@ -101,11 +101,11 @@ namespace ARDesign
         {
             if (isRunning)
             {
-                tempWidgets.AddRange(toAdd.Cast<InfluxReader>());
+                tempWidgets.AddRange(toAdd.Cast<WidgetReader>());
             }
             else
             {
-                widgets.AddRange(toAdd.Cast<InfluxReader>());
+                widgets.AddRange(toAdd.Cast<WidgetReader>());
             }
 
         }
@@ -210,8 +210,8 @@ namespace ARDesign
             GameObject newWidget = Instantiate(widgetPrefab);
             newWidget.transform.parent = sceneObj.transform;
             newWidget.transform.localPosition = wid.Position;
-            InfluxReader r = newWidget.GetComponent<InfluxReader>();
-            r.SetDBVals(wid.Measure);
+            WidgetReader r = newWidget.GetComponent<WidgetReader>();
+            r.SetDBVals(wid);
             widgets.Add(r);
         }
 
@@ -227,7 +227,7 @@ namespace ARDesign
             {
                 isRunning = true;
                 //Set up current widgets
-                foreach (InfluxReader r in widgets)
+                foreach (WidgetReader r in widgets)
                 {
                     if (!r.isSetup)
                     {
@@ -254,7 +254,7 @@ namespace ARDesign
         /// <returns>True if all widgets have been set up</returns>
         private bool AllWidgetsSetup()
         {
-            foreach (InfluxReader r in widgets)
+            foreach (WidgetReader r in widgets)
             {
                 if (!r.isSetup)
                     return false;

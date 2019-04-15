@@ -12,7 +12,7 @@ namespace ARDesign
     {
         /// <summary>
         /// This ensures type agnostic functions can be run on InfluxReaders - 
-        /// All widgets should inherit from THIS, NOT InfluxReader!
+        /// All querying widgets should inherit from THIS, NOT InfluxReader!
         /// </summary>
         /// <typeparam name="T">Data type</typeparam>
         public abstract class InfluxType<T> : InfluxReader
@@ -47,50 +47,29 @@ namespace ARDesign
         /// Abstract class for querying Influx data to widgets.
         /// Includes implemented methods for building useful queries - see Query Helper Functions
         /// </summary>
-        public abstract class InfluxReader : MonoBehaviour
+        public abstract class InfluxReader : WidgetReader
         {
-            //determines if widget needs to be updated or is static
+            /// <summary>
+            /// determines if widget needs to be updated or is static
+            /// </summary>
             public bool toUpdate = false;
-            [NonSerialized]
-            public bool isDataBuilt = false;
-            [NonSerialized]
-            public bool isSetup = false;
 
             #region PRIVATE_MEMBER_VARIABLES
-            protected string measure;
-            protected InfluxSetup parent = null;
-
             private string urlToQuery;
             private string urlToUpdate;
 
-            protected WidgetHandler widget;
             #endregion //PRIVATE_MEMBER_VARIABLES
 
             #region PUBLIC_METHODS
-            /// <summary>
-            /// Sets the base database values - should be called before anything else!
-            /// </summary>
-            /// <param name="m">Measure name</param>
-            public void SetDBVals(string m)
-            {
-                parent = gameObject.GetComponentInParent<InfluxSetup>();
-                measure = m;
-
-                urlToQuery = SetQueryUrl();
-                urlToUpdate = SetQueryUrl();
-            }
-
             /// <summary>
             /// Sets the base database values - should be called before anything else!
             /// For use in child widgets, where the parent is likely another widget
             /// </summary>
             /// <param name="m">Measure name</param>
             /// <param name="parent">Database configuration container</param>
-            public void SetDBVals(string m, InfluxSetup parent)
+            public new void SetDBVals(string m, InfluxSetup parent)
             {
-                this.parent = parent;
-                measure = m;
-
+                base.SetDBVals(m, parent);
                 urlToQuery = SetQueryUrl();
                 urlToUpdate = SetQueryUrl();
             }
@@ -107,7 +86,7 @@ namespace ARDesign
             /// Set the values in the widget, by querying the database.
             /// Heavy overhead, depending on data type
             /// </summary>
-            public void SetVals()
+            public override void SetVals()
             {
                 StartCoroutine(BuildValues());
                 isSetup = true;
@@ -136,7 +115,7 @@ namespace ARDesign
             protected abstract void ParseSetUpText(string webReturn);
 
             /// <summary>
-            /// Call back function for updating the widget
+            /// Call back function for updating the widget - only used if toUpdate is true
             /// </summary>
             /// <param name="webReturn">Result from update query</param>
             protected abstract void ParseUpdateText(string webReturn);
