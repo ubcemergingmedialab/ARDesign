@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/New Scene.unity
-    guid: 2fa7cc3e0f44b804fa27d0577651ba89
+    path: Assets/Scenes/VuforiaScene.unity
+    guid: 87fab4efab02afb4488cc21bcb6c6c10

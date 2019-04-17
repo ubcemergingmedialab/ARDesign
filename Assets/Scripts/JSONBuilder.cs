@@ -6,7 +6,7 @@ using Newtonsoft.Json.Linq;
 using System.Linq;
 using System.Web;
 using UnityEngine.Networking;
-using System.Security.Policy;
+//using System.Security.Policy;
 
 public class JSONBuilder : MonoBehaviour {
 

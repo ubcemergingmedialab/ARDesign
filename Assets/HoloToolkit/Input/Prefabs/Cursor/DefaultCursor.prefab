@@ -619,6 +619,7 @@ MonoBehaviour:
   RotationLerpTime: 0.01
   LookRotationBlend: 0
   PrimaryCursorVisual: {fileID: 4000014090385390}
+  isVisible: 1
   EnableStateData:
     Name: 
     CursorState: 0
