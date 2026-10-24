@@ -5,6 +5,10 @@ Copyright (c) 2010-2014 Qualcomm Connected Experiences, Inc.
 All Rights Reserved.
 Confidential and Proprietary - Protected under copyright and other laws.
 ==============================================================================*/
+// Compiled only when VUFORIA_ENABLED is in Player Settings > Scripting Define Symbols,
+// so the project builds in editors without the Vuforia module (such as the Jenkins
+// agent). Add the symbol when you turn Vuforia on in XR Settings.
+#if VUFORIA_ENABLED
 
 using UnityEngine;
 using Vuforia;
@@ -235,3 +239,4 @@ public class DefaultInitializationErrorHandler : MonoBehaviour
 
     #endregion // PRIVATE_METHODS
 }
+#endif
