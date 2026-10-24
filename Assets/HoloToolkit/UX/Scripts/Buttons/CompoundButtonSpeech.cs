@@ -56,11 +56,17 @@ namespace HoloToolkit.Unity.Buttons
 
         public void Start ()
         {
+#if UNITY_WEBGL
+            // WebGL players have no Microphone API, so speech buttons are always off
+            enabled = false;
+            return;
+#else
             // Disable if no microphone devices are found
             if (Microphone.devices.Length == 0) {
                 enabled = false;
                 return;
             }
+#endif
 
             if (KeywordSource == KeywordSourceEnum.None)
                 return;

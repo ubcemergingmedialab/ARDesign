@@ -4,6 +4,10 @@ Confidential and Proprietary - Protected under copyright and other laws.
 Vuforia is a trademark of PTC Inc., registered in the United States and other 
 countries.
 ===============================================================================*/
+// Compiled only when VUFORIA_ENABLED is in Player Settings > Scripting Define Symbols,
+// so the project builds in editors without the Vuforia module (such as the Jenkins
+// agent). Add the symbol when you turn Vuforia on in XR Settings.
+#if VUFORIA_ENABLED
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -88,3 +92,4 @@ public class VuMarkHandler : MonoBehaviour
 
     #endregion // PRIVATE_METHODS
 }
+#endif
